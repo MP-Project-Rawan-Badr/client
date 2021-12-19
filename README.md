@@ -59,7 +59,7 @@ https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
 | Path             | Component            | Permissions                | Behavior                                                     |
 | ---------------- | -------------------- | -------------------------- | ------------------------------------------------------------ |
 | `/`              | StartPage            | public                              | It is visible to people who are not registered in the platform                                          |
-| `/signup`        | RegisterPage         | anon only                           | Signup form, link to login, navigate to homepage after signup|
+| `/register`        | RegisterPage       | anon only                         | Signup form, link to login, navigate to homepage after signup|
 | `/login`         | LoginPage            | anon only                           | Login form, link to signup, navigate to homepage after login |
 | `/forgotPass`    | ForgotPassPage       | user                                | send link on email                                  |
 | `/resetPass`     | ResetPassPage        | user                                | Retype the password                                 |
