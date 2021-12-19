@@ -29,7 +29,7 @@ https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
 
 
 <br/>
-<br/>
+
 
 ## :black_nib: User Story
 
@@ -52,7 +52,8 @@ https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
 - Delete posts:  He can delete the posts if they are inappropriate
 
 <br/>
-<br/>
+
+
 ## :file_folder: React Routes 
 
 | Path             | Component            | Permissions                | Behavior                                                     |
@@ -75,6 +76,7 @@ https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
 
 
 <br/>
+
 ## :file_folder: Components:
 - Register
 - Login
@@ -89,6 +91,7 @@ https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
 - Sign With Google
 - Users
 - Service providers
+
 
 <br/>
 
