@@ -27,7 +27,7 @@ https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
 
 
 
-## User Story
+## :black_nib: User Story
 
 - Register: Anyone can signUp in the platform and choose if wants to be a service provider or user.
 - Login: After choosing , is moving to the login page to enter the platform with his own service.
@@ -43,7 +43,7 @@ https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
 - Chat: Both a service provider and user are can communicate between them.
 
 
-## Admin Story
+## :black_nib: Admin Story
 - Delete users:  He can spam any user if the rating is low with convincing reason.
 - Delete posts:  He can delete the posts if they are inappropriate
 
@@ -85,7 +85,9 @@ https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
 - Users
 - Service providers
 
-# :scissors: UML Diagram:
+<br/>
+
+# :triangular_ruler: UML Diagram:
 ![Screenshot (331)](https://user-images.githubusercontent.com/92247926/146680667-4b0c18e6-03e2-4a0e-b843-a506b51318da.png)
 
 
