@@ -1,4 +1,6 @@
-## project name: ``` Wmeedh ``` :high_brightness:
+<div align="center">
+  <h1> project name: ``` Wmeedh ``` :high_brightness: </h1>
+  </div>
 
 <div align="center">
   <h3>  Why did I choose the word wmeedh ? </h3>
