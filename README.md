@@ -1,6 +1,6 @@
 ## project name: ``` Wmeedh ``` :high_brightness:
 
-
+<div align="center">
 ### Why did I choose the word ``` wmeedh ``` ? ###
 
 ##### Initially, the meaning of the word  ``` wmeedh ```  is a tiny light that suddenly shines in some crystals when exposed to radiation or radioactive particles. This platform helps and gives glow to every user who wants a service and did not find it, here he finds all kinds of services without taking a long time and effortless search. #####
@@ -11,7 +11,7 @@
 
 ##### On our platform, you can find service providers, and you can put your question or inquiry and you will find an answer to it. You can put your evaluation on the services that you have tried and liked, and also make an appointment with the service provider,and also enter into a chat with him and discuss what you want and agree with him. You can also pay through a wallet inside the site or use a visa or credit card. #####
 
-
+</div>
 
 
 <br/>
