@@ -65,13 +65,13 @@ https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
 | `/resetPass`     | ResetPassPage        | user                                | Retype the password                                 |
 | `/signWithGoogle`| SignWithGooglePage   | user                                | sign with google                                    |
 | `/home`          | HomePage             | user and admin and service provider | Shows the latest updates of inquiries and posts                                    |
-| `/posts`         | PostsPage            | admin and service provider          | Shows all posts and add post                        |
+| `/posts`         | PostsPage            | admin and service provider          | Shows all posts                                     |
 | `/post/:id`      | PostPage             | admin and service provider          | update and delete post                              |
-| `/Profile`       | ProfilePage          | user and admin and service provider | edit profile                                        |
-| `/Inquiries`     | InquiriesPage        | user and admin and service provider | add and show inquiries                              |
-| `/Inquiry`       | InquiryPage          | user and admin and service provider | edit and delete inquiry                             |
+| `/Profile`       | ProfilePage          | user and admin and service provider | see and edit profile                                        |
+| `/Inquiries`     | InquiriesPage        | user and admin and service provider | show inquiries                              |
+| `/Inquiry`       | InquiryPage          | user and admin and service provider | see inquiry, edit, and delete                             |
 | `/users`         | usersPage            | user only                           | see,add inquiry,edit and delete & see home & profile|
-| `/serviceProviders`| ServiceProvidersPage | service provider only             |see,add,edit,delete post and inquiry & see home &profile  |
+| `/serviceProviders`| ServiceProvidersPage | service provider only             | see,add,edit,delete post and inquiry & see home &profile  |
 
 
 
