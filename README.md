@@ -1,4 +1,13 @@
-# client
+# Wmeedh
+```
+On our platform, you can find service providers, and you can put your question 
+or inquiry and you will find an answer to it. You can put your evaluation on
+the services that you have tried and liked, and also make an appointment with
+the service provider, 
+and also enter into a chat with him and discuss what you want and agree with him. 
+You can also pay through a wallet inside the site or use a visa or credit card.
+```
+
 
 ## User Story
 
