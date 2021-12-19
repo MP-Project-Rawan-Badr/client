@@ -57,6 +57,14 @@ https://deploy
 
 <br/>
 
+ <h2> :pencil: library </h2>
+
+- ![React](https://img.shields.io/badge/react-ccccff?style=for-the-badge&logo=react&logoColor=black)
+- ![Redux](https://img.shields.io/badge/redux-9797d3?style=for-the-badge&logo=redux&logoColor=white)
+- ![axios](https://img.shields.io/badge/axios-baa1ba?style=for-the-badge&logo=axios&logoColor=white)
+
+<br/>
+
 
 ## :file_folder: React Routes 
 
