@@ -1,6 +1,6 @@
 ## project name: Wmeedh
 
-###### Description
+#### Description
 ```
 On our platform, you can find service providers, and you can put your question 
 or inquiry and you will find an answer to it. You can put your evaluation on
@@ -36,21 +36,16 @@ You can also pay through a wallet inside the site or use a visa or credit card.
 
 | Path             | Component            | Permissions                | Behavior                                                     |
 | ---------------- | -------------------- | -------------------------- | ------------------------------------------------------------ |
-| `/`              | StartPage            | public                    | start page                                                    |
-| `/signup`        | RegisterPage         | anon only                  | Signup form, link to login, navigate to homepage after signup|
-| `/login`         | LoginPage            | anon only                  | Login form, link to signup, navigate to homepage after login |
-| `/home`          | HomePage             | user only                  | Shows all pages                                              |
-| `/posts`         | PostsPage            | user only                  | Shows all posts and add post                                 |
-| `/post/:id`      | PostPage             | user only                  | update and delete post                                       |
-|                  |                      |                            |                                                              |
-|                  |                      |                            |                                                              |
-|                  |                      |                            |                                                              |
-|                  |                      |                            |                                                              |
-|                  |                      |                            |                                                              |
-|                  |                      |                            |                                                              |
-|                  |                      |                            |                                                              |
-|                  |                      |                            |                                                              |
-|                  |                      |                            |                                                              |
+| `/`              | StartPage            | public                              | start page                                          |
+| `/signup`        | RegisterPage         | anon only                           | Signup form, link to login, navigate to homepage after signup|
+| `/login`         | LoginPage            | anon only                           | Login form, link to signup, navigate to homepage after login |
+| `/home`          | HomePage             | user and admin and service provider | Shows all pages                                     |
+| `/posts`         | PostsPage            | user and admin and service provider | Shows all posts and add post                        |
+| `/post/:id`      | PostPage             | user and admin and service provider | update and delete post                              |
+| `/Profile`       | ProfilePage          | user and admin and service provider | edit profile                                        |
+| `/Inquiries`     | InquiriesPage        | user and admin and service provider | add and show inquiries                              |
+| `/Inquiry`       | InquiryPage          |  user and admin and service provider| edit and delete inquiry                             |
+
 
 ## Components:
 - Register
@@ -58,7 +53,9 @@ You can also pay through a wallet inside the site or use a visa or credit card.
 - Home
 - Posts
 - Post
-- 
+- Profile
+- Inquiries
+- Inquiry
 
 
 ## Links:
