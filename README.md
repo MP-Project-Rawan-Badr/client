@@ -14,16 +14,16 @@ You can also pay through a wallet inside the site or use a visa or credit card.
 
 # :paperclip: Links:
 
-### :heavy_check_mark: Trello:
+### :heavy_check_mark: `Trello:`
 https://trello.com/b/p0lIavji/mprawanbadr
 
 ### :heavy_check_mark: `Slides:`
 https://slides
 
-### :heavy_check_mark: Server Repo:
+### :heavy_check_mark: `Server Repo:`
 https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
 
-### :heavy_check_mark: Deploy:
+### :heavy_check_mark: `Deploy:`
 https://deploy
 
 <br/>
