@@ -39,12 +39,15 @@ You can also pay through a wallet inside the site or use a visa or credit card.
 | `/`              | StartPage            | public                              | start page                                          |
 | `/signup`        | RegisterPage         | anon only                           | Signup form, link to login, navigate to homepage after signup|
 | `/login`         | LoginPage            | anon only                           | Login form, link to signup, navigate to homepage after login |
+| `/forgotPass`    | ForgotPassPage       | user                                | send link on email                                  |
+| `/resetPass`     | ResetPassPage        | user                                | Retype the password                                 |
+| `/signWithGoogle`| SignWithGooglePage   | user                                | sign with google                                    |
 | `/home`          | HomePage             | user and admin and service provider | Shows all pages                                     |
-| `/posts`         | PostsPage            | user and admin and service provider | Shows all posts and add post                        |
-| `/post/:id`      | PostPage             | user and admin and service provider | update and delete post                              |
+| `/posts`         | PostsPage            | admin and service provider          | Shows all posts and add post                        |
+| `/post/:id`      | PostPage             | admin and service provider          | update and delete post                              |
 | `/Profile`       | ProfilePage          | user and admin and service provider | edit profile                                        |
 | `/Inquiries`     | InquiriesPage        | user and admin and service provider | add and show inquiries                              |
-| `/Inquiry`       | InquiryPage          |  user and admin and service provider| edit and delete inquiry                             |
+| `/Inquiry`       | InquiryPage          | user and admin and service provider | edit and delete inquiry                             |
 
 
 ## Components:
@@ -56,6 +59,9 @@ You can also pay through a wallet inside the site or use a visa or credit card.
 - Profile
 - Inquiries
 - Inquiry
+- Forgot Password
+- ResetPass
+- Sign With Google
 
 
 # Links:
