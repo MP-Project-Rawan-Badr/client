@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> project name: <spam style={{color: "red"}} > Wmeedh </spam> :high_brightness: </h1>
+  <h1> project name: <spam style={"color: red"} > Wmeedh </spam> :high_brightness: </h1>
   </div>
 
 <div align="center">
