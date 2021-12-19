@@ -62,6 +62,8 @@ You can also pay through a wallet inside the site or use a visa or credit card.
 - Forgot Password
 - ResetPass
 - Sign With Google
+- Users
+- Service providers
 
 
 # Links:
