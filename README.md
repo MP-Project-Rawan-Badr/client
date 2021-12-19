@@ -1,7 +1,7 @@
 ## project name: ``` Wmeedh ``` :high_brightness:
 
 <div align="center">
-###  Why did I choose the word ``` wmeedh ``` ? 
+  <h3>  Why did I choose the word ``` wmeedh ``` ? </h3>
 
 ##### Initially, the meaning of the word  ``` wmeedh ```  is a tiny light that suddenly shines in some crystals when exposed to radiation or radioactive particles. This platform helps and gives glow to every user who wants a service and did not find it, here he finds all kinds of services without taking a long time and effortless search. #####
 
