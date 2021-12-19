@@ -1,9 +1,9 @@
-## project name: [-Wmeedh-] :high_brightness:
+## project name: Wmeedh :high_brightness:
 
 
-### Why did I choose the word [-wmeedh-]? ###
+### Why did I choose the word wmeedh ? ###
 
-##### Initially, the meaning of the word [-wmeedh-]  is a tiny light that suddenly shines in some crystals when exposed to radiation or radioactive particles. This platform helps and gives glow to every user who wants a service and did not find it, here he finds all kinds of services without taking a long time and effortless search. #####
+##### Initially, the meaning of the word ```diff @@ wmeedh @@ ``` is a tiny light that suddenly shines in some crystals when exposed to radiation or radioactive particles. This platform helps and gives glow to every user who wants a service and did not find it, here he finds all kinds of services without taking a long time and effortless search. #####
 
 <br/>
 
