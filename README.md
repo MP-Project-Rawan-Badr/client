@@ -24,7 +24,7 @@ https://trello.com/b/p0lIavji/mprawanbadr
 ### :heavy_check_mark: `Slides:`
 https://slides
 
-### :heavy_check_mark: `Server Repo:`
+### :heavy_check_mark: `Server Repositories:`
 https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
 
 ### :heavy_check_mark: `Deploy:`
