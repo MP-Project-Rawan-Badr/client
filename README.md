@@ -17,7 +17,7 @@ You can also pay through a wallet inside the site or use a visa or credit card.
 ### :heavy_check_mark: Trello:
 https://trello.com/b/p0lIavji/mprawanbadr
 
-### :heavy_check_mark: Slides:
+### :heavy_check_mark: `Slides:`
 https://slides
 
 ### :heavy_check_mark: Server Repo:
