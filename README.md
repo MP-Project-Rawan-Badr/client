@@ -69,6 +69,9 @@ You can also pay through a wallet inside the site or use a visa or credit card.
 - Users
 - Service providers
 
+# UML Diagram:
+![Screenshot (331)](https://user-images.githubusercontent.com/92247926/146680667-4b0c18e6-03e2-4a0e-b843-a506b51318da.png)
+
 
 # Links:
 
