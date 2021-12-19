@@ -48,6 +48,10 @@ You can also pay through a wallet inside the site or use a visa or credit card.
 | `/Profile`       | ProfilePage          | user and admin and service provider | edit profile                                        |
 | `/Inquiries`     | InquiriesPage        | user and admin and service provider | add and show inquiries                              |
 | `/Inquiry`       | InquiryPage          | user and admin and service provider | edit and delete inquiry                             |
+| `/users`         | usersPage            | user only                           | see,add inquiry,edit and delete & see home & profile|
+| `/serviceProviders`| ServiceProvidersPage | service provider only             |see,add,edit,delete post and inquiry & see home &profile  |
+
+
 
 
 ## Components:
@@ -75,6 +79,9 @@ https://trello.com/b/p0lIavji/mprawanbadr
 The url to your presentation slides
 
 Slides Link
+
+### Deploy:
+
 
 ### Wireframe
 ![Screenshot (329)](https://user-images.githubusercontent.com/92247926/146675684-38355463-ebed-4253-85aa-c0bddd094f24.png)
