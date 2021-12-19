@@ -10,6 +10,8 @@ and also enter into a chat with him and discuss what you want and agree with him
 You can also pay through a wallet inside the site or use a visa or credit card.
 ```
 
+<br/>
+
 # :paperclip: Links:
 
 ## trello
@@ -26,6 +28,8 @@ https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
 ### Deploy:
 
 
+<br/>
+<br/>
 
 ## :black_nib: User Story
 
@@ -47,7 +51,8 @@ https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
 - Delete users:  He can spam any user if the rating is low with convincing reason.
 - Delete posts:  He can delete the posts if they are inappropriate
 
-
+<br/>
+<br/>
 ## :file_folder: React Routes 
 
 | Path             | Component            | Permissions                | Behavior                                                     |
@@ -69,7 +74,7 @@ https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
 
 
 
-
+<br/>
 ## :file_folder: Components:
 - Register
 - Login
@@ -91,7 +96,7 @@ https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
 ![Screenshot (331)](https://user-images.githubusercontent.com/92247926/146680667-4b0c18e6-03e2-4a0e-b843-a506b51318da.png)
 
 
-### Wireframe
+### :art: Wireframe
 ![Screenshot (329)](https://user-images.githubusercontent.com/92247926/146675684-38355463-ebed-4253-85aa-c0bddd094f24.png)
 ![Screenshot (324)](https://user-images.githubusercontent.com/92247926/146675720-35b8208b-8119-4c7e-b72a-0c5edd163523.png)
 ![Screenshot (323)](https://user-images.githubusercontent.com/92247926/146675722-4b8b80f4-7d98-41ad-af02-1f70316faa16.png)
