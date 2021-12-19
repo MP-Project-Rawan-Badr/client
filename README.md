@@ -83,6 +83,9 @@ The url to your presentation slides
 
 Slides Link
 
+## Server Repo:
+https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
+
 ### Deploy:
 
 
