@@ -64,7 +64,7 @@ https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
 | `/forgotPass`    | ForgotPassPage       | user                                | send link on email                                  |
 | `/resetPass`     | ResetPassPage        | user                                | Retype the password                                 |
 | `/signWithGoogle`| SignWithGooglePage   | user                                | sign with google                                    |
-| `/home`          | HomePage             | user and admin and service provider | Shows all pages                                     |
+| `/home`          | HomePage             | user and admin and service provider | Shows the latest updates of inquiries and posts                                    |
 | `/posts`         | PostsPage            | admin and service provider          | Shows all posts and add post                        |
 | `/post/:id`      | PostPage             | admin and service provider          | update and delete post                              |
 | `/Profile`       | ProfilePage          | user and admin and service provider | edit profile                                        |
