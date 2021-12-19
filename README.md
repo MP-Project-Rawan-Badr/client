@@ -1,4 +1,4 @@
-## project name: Wmeedh
+## project name: Wmeedh :high_brightness:
 
 #### Description
 ```
