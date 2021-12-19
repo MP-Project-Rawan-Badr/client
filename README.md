@@ -1,6 +1,6 @@
 ## project name: Wmeedh :high_brightness:
 
-#### Description
+#### :bulb: Description
 ```
 On our platform, you can find service providers, and you can put your question 
 or inquiry and you will find an answer to it. You can put your evaluation on
@@ -9,6 +9,22 @@ the service provider,
 and also enter into a chat with him and discuss what you want and agree with him. 
 You can also pay through a wallet inside the site or use a visa or credit card.
 ```
+
+# :paperclip: Links:
+
+## trello
+https://trello.com/b/p0lIavji/mprawanbadr
+
+### Slides
+The url to your presentation slides
+
+Slides Link
+
+## Server Repo:
+https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
+
+### Deploy:
+
 
 
 ## User Story
@@ -32,7 +48,7 @@ You can also pay through a wallet inside the site or use a visa or credit card.
 - Delete posts:  He can delete the posts if they are inappropriate
 
 
-## React Router Routes (React App)
+## :file_folder: React Routes 
 
 | Path             | Component            | Permissions                | Behavior                                                     |
 | ---------------- | -------------------- | -------------------------- | ------------------------------------------------------------ |
@@ -54,7 +70,7 @@ You can also pay through a wallet inside the site or use a visa or credit card.
 
 
 
-## Components:
+## :file_folder: Components:
 - Register
 - Login
 - Home
@@ -69,24 +85,8 @@ You can also pay through a wallet inside the site or use a visa or credit card.
 - Users
 - Service providers
 
-# UML Diagram:
+# :scissors: UML Diagram:
 ![Screenshot (331)](https://user-images.githubusercontent.com/92247926/146680667-4b0c18e6-03e2-4a0e-b843-a506b51318da.png)
-
-
-# Links:
-
-## trello
-https://trello.com/b/p0lIavji/mprawanbadr
-
-### Slides
-The url to your presentation slides
-
-Slides Link
-
-## Server Repo:
-https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
-
-### Deploy:
 
 
 ### Wireframe
