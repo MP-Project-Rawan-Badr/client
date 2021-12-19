@@ -58,12 +58,28 @@ You can also pay through a wallet inside the site or use a visa or credit card.
 - Inquiry
 
 
-## Links:
+# Links:
+
+## trello
 https://trello.com/b/p0lIavji/mprawanbadr
 
-Slides
+### Slides
 The url to your presentation slides
 
 Slides Link
 
-Wireframe
+### Wireframe
+![Screenshot (329)](https://user-images.githubusercontent.com/92247926/146675684-38355463-ebed-4253-85aa-c0bddd094f24.png)
+![Screenshot (324)](https://user-images.githubusercontent.com/92247926/146675720-35b8208b-8119-4c7e-b72a-0c5edd163523.png)
+![Screenshot (323)](https://user-images.githubusercontent.com/92247926/146675722-4b8b80f4-7d98-41ad-af02-1f70316faa16.png)
+
+![Screenshot (325)](https://user-images.githubusercontent.com/92247926/146675730-51fc3caf-aefc-46c9-90c2-7d07ed9ed505.png)
+![Screenshot (326)](https://user-images.githubusercontent.com/92247926/146675735-73d64115-5644-474b-b866-aa0d2c7281ee.png)
+
+
+![Screenshot (330)](https://user-images.githubusercontent.com/92247926/146675838-de0db948-9a55-499e-84a2-ddafff6ce56c.png)
+![Screenshot (327)](https://user-images.githubusercontent.com/92247926/146675841-50b95d1c-de8d-47bc-817b-6e3def951d5d.png)
+
+
+
+
