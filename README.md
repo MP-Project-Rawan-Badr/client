@@ -30,3 +30,43 @@ You can also pay through a wallet inside the site or use a visa or credit card.
 ## Admin Story
 - Delete users:  He can spam any user if the rating is low with convincing reason.
 - Delete posts:  He can delete the posts if they are inappropriate
+
+
+## React Router Routes (React App)
+
+| Path             | Component            | Permissions                | Behavior                                                     |
+| ---------------- | -------------------- | -------------------------- | ------------------------------------------------------------ |
+| `/`              | StartPage            | public                    | start page                                                    |
+| `/signup`        | RegisterPage         | anon only                  | Signup form, link to login, navigate to homepage after signup|
+| `/login`         | LoginPage            | anon only                  | Login form, link to signup, navigate to homepage after login |
+| `/home`          | HomePage             | user only                  | Shows all pages                                              |
+| `/posts`         | PostsPage            | user only                  | Shows all posts and add post                                 |
+| `/post/:id`      | PostPage             | user only                  | update and delete post                                       |
+|                  |                      |                            |                                                              |
+|                  |                      |                            |                                                              |
+|                  |                      |                            |                                                              |
+|                  |                      |                            |                                                              |
+|                  |                      |                            |                                                              |
+|                  |                      |                            |                                                              |
+|                  |                      |                            |                                                              |
+|                  |                      |                            |                                                              |
+|                  |                      |                            |                                                              |
+
+## Components:
+- Register
+- Login
+- Home
+- Posts
+- Post
+- 
+
+
+## Links:
+https://trello.com/b/p0lIavji/mprawanbadr
+
+Slides
+The url to your presentation slides
+
+Slides Link
+
+Wireframe
