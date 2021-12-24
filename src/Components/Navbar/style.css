@@ -1,0 +1,27 @@
+.wrapper {
+  overflow: hidden;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.wrapper :link {
+  float: left;
+  display: block;
+  color: rgb(6, 170, 212);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+}
+.links {
+  text-decoration: none;
+  color: rgb(6, 170, 212);
+}
+
+.wrapper :hover {
+  color: rgb(37, 95, 144);
+}

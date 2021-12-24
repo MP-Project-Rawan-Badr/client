@@ -1,0 +1,10 @@
+.centered{
+position: absolute;
+top: 55%;
+left: 10%;
+width: 30%;
+font-size: 20px;
+transform: translate(-20%, -20%);
+color: white;
+}
+
