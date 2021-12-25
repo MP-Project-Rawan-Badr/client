@@ -34,7 +34,7 @@ const Navbar = () => {
         <NavLink to="/posts" className="links" style={{ marginTop: "30px" }}>
           المشاريع
         </NavLink>
-        <NavLink to="/inquiry" className="links" style={{ marginTop: "30px" }}>
+        <NavLink to="/inquiries" className="links" style={{ marginTop: "30px" }}>
           الاستفسارات
         </NavLink>
         <NavLink to="/home" className="links" style={{ marginTop: "30px" }}>
