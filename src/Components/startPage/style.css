@@ -1,0 +1,17 @@
+.center{
+    position: absolute;
+    top: 52%;
+    left: 10%;
+    width: 30%;
+    font-size: 20px;
+    transform: translate(-20%, -20%);
+    color: white;
+    /* background-color: rgb(91,129,166); */
+    }
+.center span{
+    background-color: rgb(132,140,171);
+    color: black;
+    font-size: 17px;
+}
+    
+    
