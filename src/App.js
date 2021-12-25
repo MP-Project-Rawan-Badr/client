@@ -4,6 +4,7 @@ import ActivateEmail from './Components/activeEmail';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Home from './Components/Home';
+import Inquiries from './Components/inquiries';
 import Login from './Components/login';
 import Navbar from './Components/Navbar';
 import Posts from './Components/Posts';
@@ -23,9 +24,9 @@ function App() {
      <Route exact path="/register" element={<Register />} />
      <Route exact path="/activate/:token" element={<ActivateEmail />} />
      <Route exact path="/login" element={<Login />} />
-
-
      <Route exact path="/posts" element={<Posts />} />
+     <Route exact path="/inquiries" element={<Inquiries />} />
+
 
 
      </Routes>

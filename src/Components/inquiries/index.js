@@ -4,29 +4,29 @@ import axios from 'axios';
 import "./style.css";
 import Footer from "./../Footer"
 
- const Posts = () => {
-    const [posts, setPosts] = useState([]);
+ const Inquiries = () => {
+    const [inquiries, setInquiries] = useState([]);
 
     useEffect(() => {
-      getAllPosts();
+        getAllInquiries();
     }, []);
-    const getAllPosts = async () => {
-      const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/getAllPosts`);
+
+    const getAllInquiries = async () => {
+      const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/getInquiries`);
       console.log(result);
-      setPosts(result.data);
+      setInquiries(result.data);
     };
     return (
         <>
         <Navbar />
         <div style={{ marginTop: "100px" }}>
         <br />    
-        <div className="posts">   
-         {posts.map((item) => (
+        <div className="inquiries">   
+         {inquiries.map((item) => (
            <>
           <div key={item._id}>
-          <div className="post">
+          <div className="inquiry">
             <h3 id="title" >{item.title}</h3>
-            <img id="image" src={item.image}></img>
             <h3 id="dec" >{item.dec}</h3>
           </div>
           </div>
@@ -39,4 +39,4 @@ import Footer from "./../Footer"
     )
 }
 
-export default Posts;
+export default Inquiries;

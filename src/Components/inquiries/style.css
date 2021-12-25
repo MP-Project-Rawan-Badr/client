@@ -1,0 +1,18 @@
+.inquiries{
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 20px;
+    /* background-color: rgb(113,81,80); */
+    padding: 10px;
+    /* max-height: 50px; */
+}
+
+.inquiry {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 15px;
+}
