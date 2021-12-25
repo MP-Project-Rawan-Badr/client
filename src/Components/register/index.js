@@ -75,7 +75,7 @@ const Register = () => {
               navigate("/home");
             }}
           >
-            Back
+            الغاء
           </button>
             </div>
           </form>

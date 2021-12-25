@@ -1,16 +1,19 @@
 import React from "react";
-import Header from "../Header";
-import Navbar from "../Navbar";
 import { NavLink } from "react-router-dom";
 import { BsTwitter, BsInstagram, BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import "./style.css";
+import { useNavigate } from "react-router-dom";
 
 const StartPage = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="container">
       <div className="wrapper">
         <button
+        onClick={() => {
+          navigate("/register")}}
           style={{
             float: "left",
             fontSize: "17px",
@@ -27,6 +30,8 @@ const StartPage = () => {
           انشاء حساب
         </button>
         <button
+         onClick={() => {
+          navigate("/login")}}
           style={{
             float: "left",
             fontSize: "17px",
@@ -52,6 +57,7 @@ const StartPage = () => {
               marginLeft: "620px",
               marginTop: "6px",
             }}
+            alt="logoImge"
           />
         </NavLink>
       </div>

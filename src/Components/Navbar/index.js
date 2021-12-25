@@ -1,17 +1,20 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./style.css";
-
+import { useNavigate } from "react-router-dom";
 
 
 
 const Navbar = () => {
+  const navigate = useNavigate();
 
 
   return (
     <>
       <div className="wrapper">
         <button
+        onClick={() => {
+          navigate("/profile")}}
           style={{
             float: "left",
             fontSize: "15px",
@@ -24,19 +27,20 @@ const Navbar = () => {
             color: "white",
             cursor: "pointer",
           }}
+          
         >
           الملف الشخصي
         </button>
-        <NavLink to="/" className="links" style={{ marginTop: "30px" }}>
+        <NavLink to="/posts" className="links" style={{ marginTop: "30px" }}>
           المشاريع
         </NavLink>
-        <NavLink to="/" className="links" style={{ marginTop: "30px" }}>
+        <NavLink to="/inquiry" className="links" style={{ marginTop: "30px" }}>
           الاستفسارات
         </NavLink>
-        <NavLink to="/" className="links" style={{ marginTop: "30px" }}>
+        <NavLink to="/home" className="links" style={{ marginTop: "30px" }}>
           مزودي الخدمة
         </NavLink>
-        <NavLink to="/">
+        <NavLink to="/home">
           <img
             src="./img/logo.png"
             style={{
