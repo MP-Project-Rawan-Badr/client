@@ -2,7 +2,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./style.css";
 
+
+
+
 const Navbar = () => {
+
+
   return (
     <>
       <div className="wrapper">
@@ -20,7 +25,7 @@ const Navbar = () => {
             cursor: "pointer",
           }}
         >
-          تسجيل الدخول
+          الملف الشخصي
         </button>
         <NavLink to="/" className="links" style={{ marginTop: "30px" }}>
           المشاريع

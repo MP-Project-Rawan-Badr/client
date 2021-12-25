@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../Header";
 import Navbar from "../Navbar";
 import { NavLink } from "react-router-dom";
-import { BsTwitter, BsFacebook, BsGithub } from "react-icons/bs";
+import { BsTwitter, BsInstagram, BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import "./style.css";
 
@@ -62,7 +62,7 @@ const StartPage = () => {
         />
       </div>
       <div className="center">
-        <h1 style={{ color: "rgb(172,174,197)" , backgroundColor: "rgb(91,129,166)" }}>ما هو وميض؟</h1>
+        <h1 style={{ color: "rgb(172,174,197)" , /*backgroundColor: "rgb(91,129,166)"*/ }}>ما هو وميض؟</h1>
         في منصة وميض يمكنك العثور على مزودي الخدمة ويمكنك طرح سؤالك أو استفسارك
         وستجد إجابة له. يمكنك وضع تقييمك للخدمات التي قمت بتجربتها وإعجابك بها ،
         وكذلك تحديد موعد مع مزود الخدمة ، وكذلك الدخول في محادثة معه ومناقشة ما
@@ -75,7 +75,7 @@ const StartPage = () => {
         <div className="icon">
           <Link to="" id="path">
             {" "}
-            <BsFacebook />{" "}
+            <BsInstagram />{" "}
           </Link>
           <Link to="" id="path">
             {" "}

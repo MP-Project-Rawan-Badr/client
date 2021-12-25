@@ -1,17 +1,16 @@
-.center{
-    position: absolute;
-    top: 52%;
-    left: 10%;
-    width: 30%;
-    font-size: 20px;
-    transform: translate(-20%, -20%);
-    color: white;
-    /* background-color: rgb(91,129,166); */
-    }
-.center span{
-    background-color: rgb(132,140,171);
-    color: black;
-    font-size: 17px;
+.center {
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  width: 30%;
+  font-size: 20px;
+  transform: translate(-20%, -20%);
+  color: white;
+  /* background-color: rgb(91,129,166); */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-    
-    
+.center span {
+  background-color: rgb(132, 140, 171);
+  color: black;
+  font-size: 17px;
+}
