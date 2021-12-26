@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useSelector , useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Log } from "../../reducer/signIn";
 
 const Login = () => {
@@ -10,12 +10,12 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const state = useSelector((state) => {
-    return state
+    return state;
   });
   const dispatch = useDispatch();
 
   const login = async (e) => {
-e.preventDefault()
+    e.preventDefault();
     try {
       const result = await axios.post(
         `${process.env.REACT_APP_BASE_URL}/login`,
@@ -27,15 +27,14 @@ e.preventDefault()
       const data = {
         user: result.data.result,
         token: result.data.token,
-    };
-    console.log(result.data);
-    dispatch(Log(data))
-    navigate("/home")
-  
-  } catch (error) {
-    console.log(error);
-  }
-};
+      };
+      console.log(result.data);
+      dispatch(Log(data));
+      navigate("/home");
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div>
