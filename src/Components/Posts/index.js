@@ -4,6 +4,7 @@ import axios from 'axios';
 import "./style.css";
 import Footer from "./../Footer"
 import { useSelector } from "react-redux";
+import Search from '../search';
 
 
  const Posts = () => {
@@ -25,10 +26,29 @@ import { useSelector } from "react-redux";
       setPosts(result.data);
     };
 
+    //search
+    const searchpages = (e) => {
+      const value = e.target.value.toLowerCase();
+      if (value !== "") {
+        setPosts(
+          posts.filter((post) => {
+            const postName = post.title.toLowerCase();
+            if (postName.includes(value)) return post;
+            else return null;
+          })
+        );
+      } else {
+        getAllPosts();
+      }
+    };
+
+
     return (
         <>
         <Navbar />
         <div style={{ marginTop: "100px" }}>
+        <Search className="search" searchpages={searchpages}/>
+
         <br />    
         <div className="posts">   
          {posts.map((item) => (

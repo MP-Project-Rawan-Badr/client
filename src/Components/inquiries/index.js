@@ -4,6 +4,7 @@ import axios from 'axios';
 import "./style.css";
 import Footer from "./../Footer";
 import { useSelector } from "react-redux";
+import Search from '../search';
 
 
  const Inquiries = () => {
@@ -26,10 +27,30 @@ import { useSelector } from "react-redux";
       console.log(result);
       setInquiries(result.data);
     };
+
+    //search
+    const searchpages = (e) => {
+      const value = e.target.value.toLowerCase();
+      if (value !== "") {
+        setInquiries(
+          inquiries.filter((inquiry) => {
+            const inquiryName = inquiry.title.toLowerCase();
+            if (inquiryName.includes(value)) return inquiry;
+            else return null;
+          })
+        );
+      } else {
+        getAllInquiries();
+      }
+    };
+
+
     return (
         <>
         <Navbar />
         <div style={{ marginTop: "100px" }}>
+        <Search className="search" searchpages={searchpages}/>
+
         <br />    
         <div className="inquiries">   
          {inquiries.map((item) => (
