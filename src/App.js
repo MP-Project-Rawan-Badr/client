@@ -9,6 +9,7 @@ import Inquiries from './Components/inquiries';
 import Login from './Components/login';
 import Navbar from './Components/Navbar';
 import Posts from './Components/Posts';
+import Profile from './Components/profile';
 import Register from './Components/register';
 import StartPage from './Components/startPage';
 
@@ -19,7 +20,6 @@ function App() {
      <Route exact path="/" element={<StartPage />} />
      <Route exact path="/header" element={<Header />} />
      <Route exact path="/navbar" element={<Navbar />} />
-
      <Route exact path="/home" element={<Home />} />
      <Route exact path="/footer" element={<Footer />} />
      <Route exact path="/register" element={<Register />} />
@@ -28,6 +28,8 @@ function App() {
      <Route exact path="/posts" element={<Posts />} />
      <Route exact path="/inquiries" element={<Inquiries />} />
      <Route exact path="/appointment" element={<Appointment />} />
+     <Route exact path="/profile" element={<Profile />} />
+
 
 
 

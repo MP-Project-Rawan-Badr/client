@@ -2,17 +2,27 @@ import React, {useEffect , useState} from 'react'
 import Navbar from "./../Navbar"
 import axios from 'axios';
 import "./style.css";
-import Footer from "./../Footer"
+import Footer from "./../Footer";
+import { useSelector } from "react-redux";
+
 
  const Inquiries = () => {
     const [inquiries, setInquiries] = useState([]);
+
+    const state = useSelector((state) => {
+      return state;
+    });
 
     useEffect(() => {
         getAllInquiries();
     }, []);
 
     const getAllInquiries = async () => {
-      const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/getInquiries`);
+      const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/getInquiries` , {
+        headers: {
+          Authorization: `Bearer ${state.Login.token}`,
+        },
+      });
       console.log(result);
       setInquiries(result.data);
     };
