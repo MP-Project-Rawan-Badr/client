@@ -3,18 +3,28 @@ import Navbar from "./../Navbar"
 import axios from 'axios';
 import "./style.css";
 import Footer from "./../Footer"
+import { useSelector } from "react-redux";
+
 
  const Posts = () => {
     const [posts, setPosts] = useState([]);
 
+    const state = useSelector((state) => {
+      return state;
+    });
     useEffect(() => {
       getAllPosts();
     }, []);
     const getAllPosts = async () => {
-      const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/getAllPosts`);
+      const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/getAllPosts` , {
+        headers: {
+          Authorization: `Bearer ${state.Login.token}`,
+        },
+      })
       console.log(result);
       setPosts(result.data);
     };
+
     return (
         <>
         <Navbar />

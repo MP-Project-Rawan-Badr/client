@@ -17,7 +17,7 @@ const Register = () => {
           email: e.target.email.value,
           password: e.target.password.value,
           password2: e.target.password2.value,
-          role: "61c4375564bde5690cdb68d0",
+          role: e.target.role.value,
         }
       );
       console.log(result.data);
@@ -58,11 +58,18 @@ const Register = () => {
                 :الرقم السري
               </label>
             </div>
+            
             <div className="input">
               <input className="input-field" type="password" name="password2" />
               <label className="input-label" htmlFor="password2">
                 :تأكيد الرقم السري
               </label>
+            </div>
+            <div className="selector">
+            <select className="select" name="role" >
+            <option value="61c05adf3708bf224ada4794">مستخدم</option>
+            <option value="61c4375564bde5690cdb68d0">مزود خدمة</option>
+            </select>
             </div>
             <div className="action">
               <button className="action-button" type="submit">

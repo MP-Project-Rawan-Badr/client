@@ -1,0 +1,23 @@
+.profile{
+    border: 1px solid black;
+    width: 80%;
+    height: 500px;
+    margin-left: 160px;
+}
+
+.prf{
+    margin: 0;
+}
+
+#avatar{
+    margin-top: 0;
+    float: right;
+    margin-right: 100px;
+}
+
+#name{
+    margin-top: 60px;
+    margin-left: 500px;
+    font-size: 40px;
+    
+}
