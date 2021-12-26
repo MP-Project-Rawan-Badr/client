@@ -92,3 +92,11 @@ input {
 .action-button :focus {
   outline: 0;
 }
+
+.selector{
+  width: 100%;
+}
+.select{
+  width: 300px;
+  height: 30px;
+}
