@@ -1,13 +1,14 @@
 .posts{
     margin-top: 20px;
-    margin-left: 115px;
+    margin-right: 20px;
+    /* margin-left: 115px; */
     margin-bottom: 50px;
     display: grid;
-    grid-template-columns: 28% 28% 28%;
-    grid-gap: 40px;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 20px;
     /* background-color: rgb(113,81,80); */
     padding: 10px;
-    /* max-height: 50px; */
+    /* min-height: 500px; */
 }
 
 .post {
@@ -15,7 +16,17 @@
     border: 1px solid black;
     text-align: center;
     font-size: 15px;
+    padding: 30px;
+    width: 70%;
+    min-height: 80%;
+    border-radius: 30px;
 }
+
+.post .ig {
+    width: 100%;
+    max-height: 50%;
+}
+
 .search{
     /* float: right; */
     margin-right: 1500px;

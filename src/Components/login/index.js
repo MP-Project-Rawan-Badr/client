@@ -30,7 +30,12 @@ const Login = () => {
       };
       console.log(result.data);
       dispatch(Log(data));
-      navigate("/home");
+      console.log(result.data.result.role);
+      if(result.data.result.role == "61c4375564bde5690cdb68d0"){
+        navigate("/home");
+      } else{
+      navigate("/posts");
+      }
     } catch (error) {
       console.log(error);
     }

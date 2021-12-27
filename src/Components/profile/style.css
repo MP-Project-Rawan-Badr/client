@@ -1,23 +1,48 @@
-.profile{
-    border: 1px solid black;
-    width: 80%;
-    height: 500px;
-    margin-left: 160px;
+.profile {
+  border: 1px solid black;
+  width: 80%;
+  height: 500px;
+  margin-left: 160px;
 }
 
-.prf{
-    margin: 0;
+.prf {
+  margin: 0;
 }
 
-#avatar{
-    margin-top: 0;
-    float: right;
-    margin-right: 100px;
+#avatar {
+  margin-top: 0;
+  float: right;
+  margin-right: 100px;
+  width: 100px;
 }
 
-#name{
-    margin-top: 60px;
-    margin-left: 500px;
-    font-size: 40px;
-    
+#name {
+  /* float: right; */
+  /* margin-top: 60px;*/
+  margin-right: 50px;
+  font-size: 30px;
+}
+
+#bio {
+display: right;  
+margin-top: 100px;
+  font-size: 15px;
+  /* margin-left: 10px; */
+}
+
+.addpost {
+  background-color: rgb(6, 170, 212);
+  /* border: none; */
+  width: 100px;
+  height: 36px;
+  font-size: 15px;
+}
+
+.addInq {
+  background-color: rgb(6, 170, 212);
+  /* border: none; */
+  width: 100px;
+  height: 36px;
+  font-size: 15px;
+  margin-top: 15px;
 }
