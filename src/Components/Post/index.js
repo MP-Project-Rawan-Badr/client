@@ -4,7 +4,6 @@ import axios from 'axios';
 import "./style.css";
 import Footer from "../Footer"
 import { useSelector } from "react-redux";
-import Search from '../search';
 import { useNavigate , useParams } from "react-router-dom";
 
 

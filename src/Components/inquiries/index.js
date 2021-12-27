@@ -5,10 +5,14 @@ import "./style.css";
 import Footer from "./../Footer";
 import { useSelector } from "react-redux";
 import Search from '../search';
+import { useNavigate , useParams } from "react-router-dom";
+
 
 
  const Inquiries = () => {
     const [inquiries, setInquiries] = useState([]);
+    const navigate = useNavigate();
+    const { id } = useParams();
 
     const state = useSelector((state) => {
       return state;
@@ -56,7 +60,8 @@ import Search from '../search';
          {inquiries.map((item) => (
            <>
           <div key={item._id}>
-          <div className="inquiry">
+          <div className="inquiry"
+           onClick={() => navigate(`/inquiry/${item._id}`)}>
             <h3 id="title" >{item.title}</h3>
             <h3 id="dec" >{item.dec}</h3>
           </div>
