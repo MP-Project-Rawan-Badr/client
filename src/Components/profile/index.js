@@ -26,7 +26,7 @@ const Profile = () => {
   }, []);
 
 
-  //description
+  //description about user
   const getOneUser = async () => {
     const result = await axios.get(
       `${process.env.REACT_APP_BASE_URL}/Oneusers/${state.Login.user._id}`,

@@ -6,6 +6,7 @@ import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Home from './Components/Home';
 import Inquiries from './Components/inquiries';
+import Inquiry from './Components/inquiry';
 import Login from './Components/login';
 import Navbar from './Components/Navbar';
 import Post from './Components/Post';
@@ -31,6 +32,8 @@ function App() {
      <Route exact path="/appointment" element={<Appointment />} />
      <Route exact path="/profile" element={<Profile />} />
      <Route exact path="/post/:id" element={<Post />} />
+     <Route exact path="/inquiry/:id" element={<Inquiry />} />
+
 
 
 
