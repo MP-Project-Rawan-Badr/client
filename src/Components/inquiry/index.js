@@ -4,10 +4,7 @@ import axios from 'axios';
 import "./style.css";
 import Footer from "../Footer"
 import { useSelector } from "react-redux";
-import Search from '../search';
 import { useNavigate , useParams } from "react-router-dom";
-
-
 
  const Inquiry = () => {
   const navigate = useNavigate();
@@ -34,17 +31,17 @@ import { useNavigate , useParams } from "react-router-dom";
       setInquiry(result.data);
     };
 
-     //description about user
+//description about user
   const getOneUser = async () => {
     const result = await axios.get(
-      `${process.env.REACT_APP_BASE_URL}/Oneusers/${state.Login.user._id}`,
+      `${process.env.REACT_APP_BASE_URL}/getUserInquiry/${state.Login.user._id}`,
       { headers: { Authorization: `Bearer ${state.Login.token}` } }
     );
     console.log(result);
-    setUser(result.data);
+    setInquiry(result.data);
   };
   console.log("token", state.Login.token);
-  console.log(state.Login.user.userName);
+  console.log(state.Login);
 
 
     return (
@@ -54,26 +51,15 @@ import { useNavigate , useParams } from "react-router-dom";
         <br />    
         <div className="desInquiry">   
         <div className="prf">
-        {user.map((item) => (
-          <>
-            <div key={item._id}>
-                <div>
-                  <img id="avatar" src={item.avatar}></img>
-                </div>
-                <div>
-                  <h3 id="name">{item.userName}</h3>
-                  </div>
-              </div>
-            
-          </>
-        ))}
          {inquiry.map((item) => (
            <>
-           {console.log(item)}
+           {console.log("item" , item)}
           <div key={item._id}>
           <div className="desc">
             <h3 id="title" >{item.title}</h3>
             <h3 id="dec" >{item.dec}</h3>
+            <img id="avatar" src={item.user.avatar}></img>
+            <h3 id="name">{item.user.userName}</h3>
             </div>
           </div>
           </>

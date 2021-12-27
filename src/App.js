@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import ActivateEmail from './Components/activeEmail';
+import ServiceProvider from './Components/allServiceProvider';
 import Appointment from './Components/appointment';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
@@ -33,6 +34,7 @@ function App() {
      <Route exact path="/profile" element={<Profile />} />
      <Route exact path="/post/:id" element={<Post />} />
      <Route exact path="/inquiry/:id" element={<Inquiry />} />
+     <Route exact path="/ServiceProvider" element={<ServiceProvider />} />
 
 
 

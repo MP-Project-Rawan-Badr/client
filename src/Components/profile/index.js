@@ -10,7 +10,8 @@ import Footer from "./../Footer";
 const Profile = () => {
   const [user, setUser] = useState([]);
   const [posts, setPosts] = useState([]);
-  const { id } = useParams();
+  const [inquiry, setInquiry] = useState([]);
+
   const navigate = useNavigate();
 
 
@@ -23,6 +24,7 @@ const Profile = () => {
     console.log(state.Login.user._id);
     getOneUser();
     getUserPost();
+    getUserInquiry();
   }, []);
 
 
@@ -37,11 +39,11 @@ const Profile = () => {
   };
   console.log("token", state.Login.token);
   console.log(state.Login.user.userName);
-
+//
 
 //user post
 const getUserPost = async () => {
-  const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/getUserPost/${id}` , {
+  const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/getUserPost/${state.Login.user._id}` , {
     headers: {
       Authorization: `Bearer ${state.Login.token}`,
     },
@@ -50,6 +52,20 @@ const getUserPost = async () => {
   setPosts(result.data);
 };
 //
+
+// getUserInquiry
+//user inquiry
+const getUserInquiry = async () => {
+  const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/getUserInquiry/${state.Login.user._id}` , {
+    headers: {
+      Authorization: `Bearer ${state.Login.token}`,
+    },
+  })
+  console.log(result);
+  setInquiry(result.data);
+};
+//
+
 
   return (
     <>
@@ -86,6 +102,7 @@ const getUserPost = async () => {
         ))}
       </div>
       <br />
+      {/* posts */}
       <div className="posts">   
          {posts.map((item) => (
            <>
@@ -100,7 +117,19 @@ const getUserPost = async () => {
           </>
         ))}
       </div>
-
+      {/* inquiry */}
+      <div className="inquiries">   
+         {inquiry.map((item) => (
+           <>
+          <div key={item._id}>
+          <div className="inquiry">
+            <h3 id="title" >{item.title}</h3>
+            <h3 id="dec" >{item.dec}</h3>
+          </div>
+          </div>
+          </>
+        ))}
+      </div>
       <Footer />
     </>
   );
