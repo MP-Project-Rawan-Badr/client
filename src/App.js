@@ -8,6 +8,7 @@ import Home from './Components/Home';
 import Inquiries from './Components/inquiries';
 import Login from './Components/login';
 import Navbar from './Components/Navbar';
+import Post from './Components/Post';
 import Posts from './Components/Posts';
 import Profile from './Components/profile';
 import Register from './Components/register';
@@ -29,7 +30,7 @@ function App() {
      <Route exact path="/inquiries" element={<Inquiries />} />
      <Route exact path="/appointment" element={<Appointment />} />
      <Route exact path="/profile" element={<Profile />} />
-
+     <Route exact path="/post/:id" element={<Post />} />
 
 
 

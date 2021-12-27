@@ -2,16 +2,29 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 
 
 const Navbar = () => {
   const navigate = useNavigate();
 
+  const state = useSelector((state) => {
+    return state;
+  });
 
+  console.log(state.Login.user.userName);
+  
   return (
     <>
       <div className="wrapper">
+      {/* <div className="avatar avatar-lg">
+       <img src={state.Login.user.avatar} alt="img" />
+       </div> 
+        <div className="name ms-4">
+         <h5 className="my-3">{state.Login.user.userName}</h5>
+         </div> */}
+      
         <button
         onClick={() => {
           navigate("/profile")}}
@@ -42,17 +55,19 @@ const Navbar = () => {
         </NavLink>
         <NavLink to="/home">
           <img
+          className="igLogo"
             src="./img/logo.png"
             style={{
               width: "180px",
               float: "right",
               paddingRight: "0",
-              marginLeft: "300px",
-              marginTop: "6px",
+              marginRight: "50px",
+              marginTop: "20px",
             }}
           />
         </NavLink>
       </div>
+     
     </>
   );
 };

@@ -5,9 +5,13 @@ import "./style.css";
 import Footer from "./../Footer"
 import { useSelector } from "react-redux";
 import Search from '../search';
+import { useNavigate } from "react-router-dom";
+
 
 
  const Posts = () => {
+  const navigate = useNavigate();
+
     const [posts, setPosts] = useState([]);
 
     const state = useSelector((state) => {
@@ -48,15 +52,15 @@ import Search from '../search';
         <Navbar />
         <div style={{ marginTop: "100px" }}>
         <Search className="search" searchpages={searchpages}/>
-
         <br />    
         <div className="posts">   
          {posts.map((item) => (
            <>
           <div key={item._id}>
           <div className="post">
+          <img className='ig'   onClick={() => navigate(`/Post/${item._id}`)}
+             id="image" src={item.image}></img>
             <h3 id="title" >{item.title}</h3>
-            <img id="image" src={item.image}></img>
             <h3 id="dec" >{item.dec}</h3>
           </div>
           </div>

@@ -8,14 +8,13 @@
   z-index: 1;
 }
 
-.wrapper :link {
+.links {
   float: left;
-  display: block;
   color: rgb(6, 170, 212);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
   cursor: pointer;
 }
 .links {
@@ -23,6 +22,5 @@
   color: rgb(6, 170, 212);
 }
 
-.wrapper :hover {
-  color: rgb(37, 95, 144);
-}
+
+

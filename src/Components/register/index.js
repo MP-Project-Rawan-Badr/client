@@ -26,14 +26,12 @@ const Register = () => {
         setError(result.data.errors[0].msg);
       } else if (result.data.message) {
         setError(result.data.message);
-        navigate("/home");
       }
     } catch (error) {
       console.log(error);
     }
   };
 
-  
   return (
     <>
       <div className="container" style={{ marginTop: "20px" }}>
@@ -58,7 +56,7 @@ const Register = () => {
                 :الرقم السري
               </label>
             </div>
-            
+
             <div className="input">
               <input className="input-field" type="password" name="password2" />
               <label className="input-label" htmlFor="password2">
@@ -66,28 +64,27 @@ const Register = () => {
               </label>
             </div>
             <div className="selector">
-            <select className="select" name="role" >
-            <option value="61c05adf3708bf224ada4794">مستخدم</option>
-            <option value="61c4375564bde5690cdb68d0">مزود خدمة</option>
-            </select>
+              <select className="select" name="role">
+                <option value="61c05adf3708bf224ada4794">مستخدم</option>
+                <option value="61c4375564bde5690cdb68d0">مزود خدمة</option>
+              </select>
             </div>
             <div className="action">
               <button className="action-button" type="submit">
                 انشاء
               </button>
               <button
-              className="action-button"
-              style={{backgroundColor: "grey" , margin: "10px"}}
-            onClick={() => {
-              navigate("/home");
-            }}
-          >
-            الغاء
-          </button>
+                className="action-button"
+                style={{ backgroundColor: "grey", margin: "10px" }}
+                onClick={() => {
+                  navigate("/");
+                }}
+              >
+                الغاء
+              </button>
             </div>
           </form>
           <p>{error}</p>
-         
         </div>
       </div>
     </>
