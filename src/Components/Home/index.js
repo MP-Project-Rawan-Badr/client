@@ -14,7 +14,7 @@ const Home = () => {
   const state = useSelector((state) => {
     return state;
   });
-  const [len, setlen] = useState(0)
+  const [len, setlen] = useState(0);
   const getAllInquiries = async () => {
     const result = await axios.get(
       `${process.env.REACT_APP_BASE_URL}/getInquiries`,
@@ -26,9 +26,8 @@ const Home = () => {
     );
     console.log(result);
     setInquiries(result.data);
-    setlen( result.data.length)
-   console.log(len);
-
+    setlen(result.data.length);
+    console.log(len);
   };
 
   return (
@@ -38,16 +37,12 @@ const Home = () => {
         <Header />
 
         <h2>احدث الاستفسارات والاسئله</h2>
-        <div >
-          {
-          
-          inquiries
+        <div>
+          {inquiries
             .map((i, index) => {
-              return (
-                <>{index >= len-3 ? i.title : null}</>
-              );
-            }).reverse()
-            }
+              return <>{index >= len - 3 ? i.title : null}</>;
+            })
+            .reverse()}
         </div>
         <br />
         <h2>احدث المشاريع</h2>

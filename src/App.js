@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import ActivateEmail from './Components/activeEmail';
+import AddPosts from './Components/addPost';
 import ServiceProvider from './Components/allServiceProvider';
 import Appointment from './Components/appointment';
 import Footer from './Components/Footer';
@@ -35,6 +36,7 @@ function App() {
      <Route exact path="/post/:id" element={<Post />} />
      <Route exact path="/inquiry/:id" element={<Inquiry />} />
      <Route exact path="/ServiceProvider" element={<ServiceProvider />} />
+     <Route exact path="/addpost" element={<AddPosts />} />
 
 
 

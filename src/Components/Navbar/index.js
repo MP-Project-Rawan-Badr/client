@@ -2,9 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-
-
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -13,21 +11,22 @@ const Navbar = () => {
     return state;
   });
 
-  console.log(state.Login.user.userName);
-  
+  // console.log(state.Login.user.userName);
+
   return (
     <>
       <div className="wrapper">
-      {/* <div className="avatar avatar-lg">
+        {/* <div className="avatar avatar-lg">
        <img src={state.Login.user.avatar} alt="img" />
        </div> 
         <div className="name ms-4">
          <h5 className="my-3">{state.Login.user.userName}</h5>
          </div> */}
-      
+
         <button
-        onClick={() => {
-          navigate("/profile")}}
+          onClick={() => {
+            navigate("/profile");
+          }}
           style={{
             float: "left",
             fontSize: "15px",
@@ -40,22 +39,36 @@ const Navbar = () => {
             color: "white",
             cursor: "pointer",
           }}
-          
         >
           الملف الشخصي
         </button>
         <NavLink to="/posts" className="links" style={{ marginTop: "30px" }}>
           المشاريع
         </NavLink>
-        <NavLink to="/inquiries" className="links" style={{ marginTop: "30px" }}>
+        <NavLink
+          to="/inquiries"
+          className="links"
+          style={{ marginTop: "30px" }}
+        >
           الاستفسارات
         </NavLink>
-        <NavLink to="/ServiceProvider" className="links" style={{ marginTop: "30px" }}>
+        <NavLink
+          to="/ServiceProvider"
+          className="links"
+          style={{ marginTop: "30px" }}
+        >
           مزودي الخدمة
+        </NavLink>
+        <NavLink
+          to="/addpost"
+          className="links"
+          style={{ marginTop: "30px" }}
+        >
+          اضافة مشروع
         </NavLink>
         <NavLink to="/home">
           <img
-          className="igLogo"
+            className="igLogo"
             src="./img/logo.png"
             style={{
               width: "180px",
@@ -67,7 +80,6 @@ const Navbar = () => {
           />
         </NavLink>
       </div>
-     
     </>
   );
 };

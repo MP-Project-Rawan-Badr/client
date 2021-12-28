@@ -12,15 +12,15 @@ const StartPage = () => {
     <div className="container">
       <div className="wrapper">
         <button
-        onClick={() => {
-          navigate("/register")}}
+          onClick={() => {
+            navigate("/register");
+          }}
           style={{
             float: "left",
             fontSize: "17px",
             padding: "10px",
             backgroundColor: "rgb(59,78,92)",
             borderBottom: "1px solid black",
-            // marginRight: "460px",
             marginLeft: "40px",
             marginTop: "35px",
             color: "white",
@@ -30,8 +30,9 @@ const StartPage = () => {
           انشاء حساب
         </button>
         <button
-         onClick={() => {
-          navigate("/login")}}
+          onClick={() => {
+            navigate("/login");
+          }}
           style={{
             float: "left",
             fontSize: "17px",
@@ -63,12 +64,18 @@ const StartPage = () => {
       </div>
       <div className="container">
         <img
-          src="./img/background.jpg"
+          src="./img/background.jpg" alt="backgroundImg"
           style={{ marginTop: "17px", width: "100%", height: "700px" }}
         />
       </div>
       <div className="center">
-        <h1 style={{ color: "rgb(172,174,197)" , /*backgroundColor: "rgb(91,129,166)"*/ }}>ما هو وميض؟</h1>
+        <h1
+          style={{
+            color: "rgb(172,174,197)",
+          }}
+        >
+          ما هو وميض؟
+        </h1>
         في منصة وميض يمكنك العثور على مزودي الخدمة ويمكنك طرح سؤالك أو استفسارك
         وستجد إجابة له. يمكنك وضع تقييمك للخدمات التي قمت بتجربتها وإعجابك بها ،
         وكذلك تحديد موعد مع مزود الخدمة ، وكذلك الدخول في محادثة معه ومناقشة ما
@@ -76,7 +83,7 @@ const StartPage = () => {
         استخدام تأشيرة أو بطاقة ائتمان
         <p>
           {" "}
-          لتبدأ مع ومـيـض <span>  انشئ حسابك الان</span>
+          لتبدأ مع ومـيـض <span> انشئ حسابك الان</span>
         </p>
         <div className="icon">
           <Link to="" id="path">

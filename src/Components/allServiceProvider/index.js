@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 
 const ServiceProvider = () => {
-  const navigate = useNavigate();
-  const { id } = useParams();
   const [user, setUser] = useState([]);
 
   const state = useSelector((state) => {
@@ -33,24 +30,22 @@ const ServiceProvider = () => {
 
   return (
     <>
-            <Navbar />
-            <div style={{ marginTop: "100px" }}>
-
-
-      {user.map((item) => (
-        <>
-          <div key={item._id}>
-            <div>
-              <ul>
-                <img id="name">{item.avatar}</img>
-                <li id="name">{item.userName}</li>
-              </ul>
+      <Navbar />
+      <div style={{ marginTop: "100px" }}>
+        {user.map((item) => (
+          <>
+            <div key={item._id}>
+              <div>
+                <ul>
+                  <img id="name">{item.avatar}</img>
+                  <li id="name">{item.userName}</li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </>
-      ))}
+          </>
+        ))}
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
