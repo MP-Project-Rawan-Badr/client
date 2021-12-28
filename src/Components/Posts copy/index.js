@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./../Navbar";
+import Navbar from "../Navbar";
 import axios from "axios";
 import "./style.css";
-import Footer from "./../Footer";
+import Footer from "../Footer";
 import { useSelector } from "react-redux";
 import Search from "../search";
 import { useNavigate } from "react-router-dom";

@@ -33,35 +33,34 @@ const ActivateEmail = () => {
 
   return (
     <div>
-    <div className="home"
-     style={{marginTop: "200px"}}>
-      {!Erro ? (
-        <div className="homeContainer">
-          <h1>Your account has been activated!</h1>
-          <div className="btns">
+      <div className="home" style={{ marginTop: "200px" }}>
+        {!Erro ? (
+          <div className="homeContainer">
+            <h1>Your account has been activated!</h1>
+            <div className="btns">
+              <button
+                onClick={() => {
+                  navigate("/login");
+                }}
+              >
+                Go Login
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div className="formm">
+            <h1>Error</h1>
+            <p>{err}</p>
             <button
               onClick={() => {
-                navigate("/login");
+                navigate("/");
               }}
             >
-              Go Login
+              Back to home
             </button>
           </div>
-        </div>
-      ) : (
-        <div className="formm">
-          <h1>Error</h1>
-          <p>{err}</p>
-          <button
-            onClick={() => {
-              navigate("/");
-            }}
-          >
-            Back to home
-          </button>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
     </div>
   );
 };

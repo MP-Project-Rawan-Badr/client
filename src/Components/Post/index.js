@@ -4,14 +4,10 @@ import axios from 'axios';
 import "./style.css";
 import Footer from "../Footer"
 import { useSelector } from "react-redux";
-import { useNavigate , useParams } from "react-router-dom";
-
-
+import { useParams } from "react-router-dom";
 
  const Post = () => {
-  const navigate = useNavigate();
     const { id } = useParams();
-
     const [post, setPost] = useState([]);
 
     const state = useSelector((state) => {
@@ -32,6 +28,9 @@ import { useNavigate , useParams } from "react-router-dom";
       setPost(result.data);
     };
 
+    
+
+
     return (
         <>
         <Navbar />
@@ -45,10 +44,12 @@ import { useNavigate , useParams } from "react-router-dom";
           <div className="desc">
             <h3 id="title" >{item.title}</h3>
             <h3 id="dec" >{item.dec}</h3>
+            <h3 id="dec" >{item.price}</h3>
+            <h3 id="dec" >{item.workingTime}</h3>
             </div>
-            {item.imgs.map((img)=> (
+            {item.image.map((img)=> (
               <>
-             <img className='igs' id="image" src={img[0]}></img>
+             <img className='igs' id="image" src={img}></img>
              </>
             ))}
           </div>
