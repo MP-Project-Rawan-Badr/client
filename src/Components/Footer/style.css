@@ -1,25 +1,23 @@
 footer {
-    /* height: 60%; */
-    height: 3rem;
-  }
-  .fulldiv {
-    margin: 0;
-    position: static;
-    bottom: 10px;
-    background-color: rgb(91,129,166);
-    text-align: center;
-    width: 100%;
-    height: 8rem;
-  }
-  .icon {
-    font-size: 1.5rem;
-    padding: 15px;
-  }
-  #path{
-      color: white;
-      margin: 0 20px;
-      margin-top: 100px;  
-      
-
-  }
- 
+  margin: 0;
+  bottom: 0;
+  position: fixed;
+}
+.fulldiv {
+  margin: 0;
+  position: static;
+  bottom: 0;
+  background-color: rgb(91, 129, 166);
+  text-align: center;
+  width: 100%;
+  height: 8rem;
+}
+.icon {
+  font-size: 1.5rem;
+  padding: 15px;
+}
+#path {
+  color: white;
+  margin: 0 20px;
+  margin-top: 100px;
+}

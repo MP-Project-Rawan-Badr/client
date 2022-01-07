@@ -1,26 +1,87 @@
-.wrapper {
+.navWrapper {
+
+  display: flex;
+  padding: 5px;
   overflow: hidden;
-  background-color: #ffffff;
-  position: fixed;
+  background-color: rgb(243, 243, 243);
+  /* position: fixed; */
   top: 0;
   width: 100%;
-  height: 100px;
-  z-index: 1;
+  height: 120px;
+  left: 0;
+  justify-content: space-evenly;
+}
+.navWrapper :hover{
+  background-color: rgb(243,243,243);
+  color: rgb(79,126,167);
 }
 
-.links {
-  float: left;
+.linkNav {
+  /* float: right; */
+  /* margin-right: 30px; */
   color: rgb(6, 170, 212);
-  text-align: center;
-  padding: 14px 16px;
+  /* text-align: center; */
+  /* padding: 10px 10px; */
   text-decoration: none;
   font-size: 20px;
   cursor: pointer;
-}
-.links {
+  margin-top: 30px;
+  /* margin-left: 20px; */
+  /* margin-top: 100px; */
+/*  */
+
   text-decoration: none;
-  color: rgb(6, 170, 212);
 }
 
+/*  */
+.dropbtn {
+  color: white;
+  /* padding: 5px; */
+  border: none;
+  /* float: left; */
+  margin-top: 10px;
+  cursor: pointer;
+  /* position: fixed; */
+  /* margin-left: 100px; */
+  /* margin-top: 10px; */
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  z-index: 3;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  /* z-index: 2; */
+}
+
+.dropdown-content #contentProf {
+  color: black;
+  /* padding: 5px 5px; */
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  /* z-index: 1; */
+}
+
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
 
 
+/* #avImg{
+  float: left;
+
+
+} */

@@ -1,7 +1,7 @@
 const initialState = {
     role: "",
     token: "",
-    user: null,
+    user: "",
   };
   
   const Login = (state = initialState, action) => {

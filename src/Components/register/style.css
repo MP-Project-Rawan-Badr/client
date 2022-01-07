@@ -1,14 +1,15 @@
-.container {
+.containerForm {
   font-family: "DM Sans", sans-serif;
-  line-height: 1.5;
-  padding: 0;
-  margin: 0;
+  line-height: 1.2;
+  padding: 20px;
+  /* margin: 10px; */
 }
 
 
 input {
   appearance: none;
   border-radius: 0;
+  text-align: right;
 }
 
 .card {
@@ -16,7 +17,7 @@ input {
   display: flex;
   flex-direction: column;
   width: 50%;
-  max-width: 400px;
+  max-width: 500px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 10px 20px 0 rgba(#999, 0.25);
@@ -28,20 +29,21 @@ input {
 .card-image {
   /* border-radius: 8px; */
   overflow: hidden;
-  padding-bottom: 30%;
+  padding-bottom: 25%;
   background-image: url("../../../public/img/logo.png");
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: 0 5%;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .input {
   display: flex;
   flex-direction: column-reverse;
   position: relative;
-  padding-top: 1.5rem;
-  padding: 20px;
+  padding-top: 0.5rem;
+  padding: 10px;
+
 }
 
 
@@ -53,14 +55,21 @@ input {
   font-size: 25px;
 }
 
+.inputLabel{
+  text-align: right;
+  color: rgb(19,82,154);
+  font-size: 23px;
+  font-weight: bold;
+
+}
+
 .input-field {
   border: 0;
   z-index: 1;
   background-color: transparent;
   border-bottom: 2px solid #eee;
   font: inherit;
-  font-size: 1.125rem;
-  padding: 0.25rem 0;
+  font-size: 1.109rem;
 }
 .input-field :focus,
 .input-field :valid {
@@ -79,14 +88,15 @@ input {
 
 .action-button {
   font: inherit;
-  font-size: 1.25rem;
-  padding: 10px;
-  width: 30%;
-  font-weight: 500;
+  font-size: 1rem;
+  padding: 7px;
+  width: 15%;
+  font-weight: 50;
   background-color: rgb(19,82,139);
   border-radius: 10px;
   color: #fff;
   border: 0;
+
   /* display: inline; */
 }
 .action-button :focus {
@@ -95,8 +105,19 @@ input {
 
 .selector{
   width: 100%;
+  text-align: right;
 }
 .select{
-  width: 300px;
-  height: 30px;
+  width: 90px;
+  height: 26px;
+  margin-right: 50px;
+  text-align: right;
+
+}
+
+.progAndText{
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  font-weight: "bold"
 }

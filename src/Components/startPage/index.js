@@ -9,8 +9,9 @@ const StartPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="container">
-      <div className="wrapper">
+    <>
+      <div className="startWrapper">
+
         <button
           onClick={() => {
             navigate("/register");
@@ -22,7 +23,6 @@ const StartPage = () => {
             backgroundColor: "rgb(59,78,92)",
             borderBottom: "1px solid black",
             marginLeft: "40px",
-            marginTop: "35px",
             color: "white",
             cursor: "pointer",
           }}
@@ -39,9 +39,7 @@ const StartPage = () => {
             padding: "10px",
             backgroundColor: "rgb(59,78,92)",
             borderBottom: "1px solid black",
-            marginRight: "400px",
-            marginLeft: "30px",
-            marginTop: "35px",
+            marginLeft: "20px",
             color: "white",
             cursor: "pointer",
           }}
@@ -55,20 +53,21 @@ const StartPage = () => {
               width: "180px",
               float: "right",
               paddingRight: "0",
-              marginLeft: "620px",
-              marginTop: "6px",
             }}
             alt="logoImge"
           />
         </NavLink>
       </div>
-      <div className="container">
+      <div >
+      <div className="containarBackground">
         <img
-          src="./img/background.jpg" alt="backgroundImg"
-          style={{ marginTop: "17px", width: "100%", height: "700px" }}
+          src="./img/background.jpg"
+          alt="backgroundImg"
+          style={{ width: "100%", height: "89vh" }}
         />
       </div>
-      <div className="center">
+      </div>
+      <div className="centerBackground">
         <h1
           style={{
             color: "rgb(172,174,197)",
@@ -82,25 +81,21 @@ const StartPage = () => {
         تريد والاتفاق معه. يمكنك أيضًا الدفع من خلال محفظة داخل الموقع أو
         استخدام تأشيرة أو بطاقة ائتمان
         <p>
-          {" "}
           لتبدأ مع ومـيـض <span> انشئ حسابك الان</span>
         </p>
         <div className="icon">
           <Link to="" id="path">
-            {" "}
-            <BsInstagram />{" "}
+            <BsInstagram />
           </Link>
           <Link to="" id="path">
-            {" "}
-            <BsTwitter />{" "}
+            <BsTwitter />
           </Link>
           <Link to="" id="path">
-            {" "}
-            <BsGithub />{" "}
+            <BsGithub />
           </Link>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
