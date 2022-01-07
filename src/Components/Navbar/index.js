@@ -2,7 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { LogT } from "./../../reducer/signIn";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -10,61 +12,57 @@ const Navbar = () => {
   const state = useSelector((state) => {
     return state;
   });
+  // console.log(state);
+  // logout
+  const dispatch = useDispatch();
+  const signout = () => {
+    localStorage.clear();
+    dispatch(LogT({ token: "" }));
+    navigate("/login");
+  };
 
   // console.log(state.Login.user.userName);
 
   return (
     <>
-      <div className="wrapper">
-        {/* <div className="avatar avatar-lg">
-       <img src={state.Login.user.avatar} alt="img" />
-       </div> 
-        <div className="name ms-4">
-         <h5 className="my-3">{state.Login.user.userName}</h5>
-         </div> */}
+      <div className="navWrapper">
+        <div>
+          <div className="dropdown">
+            <img
+              className="dropbtn"
+              style={{ borderRadius: "50%", width: "50px" }}
+              src={state.Login.user.avatar}
+              alt="img"
+            />
+            <div className="dropdown-content">
+              <Link
+                to={`/profile/${state.Login.user._id}`}
+                id="contentProf"
+                style={{ marginLeft: "5px", fontSize: "16px" }}
+              >
+                {state.Login.user.userName}
+              </Link>
+              <Link
+                onClick={signout}
+                to="/login"
+                id="contentProf"
+                style={{ marginLeft: "5px", fontSize: "16px" }}
+              >
+                تسجيل خروج
+              </Link>
+            </div>
+          </div>
+        </div>
 
-        <button
-          onClick={() => {
-            navigate("/profile");
-          }}
-          style={{
-            float: "left",
-            fontSize: "15px",
-            padding: "10px",
-            backgroundColor: "rgb(59,78,92)",
-            borderBottom: "1px solid black",
-            marginRight: "460px",
-            marginLeft: "70px",
-            marginTop: "40px",
-            color: "white",
-            cursor: "pointer",
-          }}
-        >
-          الملف الشخصي
-        </button>
-        <NavLink to="/posts" className="links" style={{ marginTop: "30px" }}>
+        {/*  */}
+        <NavLink to="/posts" className="linkNav">
           المشاريع
         </NavLink>
-        <NavLink
-          to="/inquiries"
-          className="links"
-          style={{ marginTop: "30px" }}
-        >
+        <NavLink to="/inquiries" className="linkNav">
           الاستفسارات
         </NavLink>
-        <NavLink
-          to="/ServiceProvider"
-          className="links"
-          style={{ marginTop: "30px" }}
-        >
-          مزودي الخدمة
-        </NavLink>
-        <NavLink
-          to="/addpost"
-          className="links"
-          style={{ marginTop: "30px" }}
-        >
-          اضافة مشروع
+        <NavLink to="/ServiceProvider" className="linkNav">
+          مقدمي الخدمة
         </NavLink>
         <NavLink to="/home">
           <img
@@ -72,10 +70,8 @@ const Navbar = () => {
             src="./img/logo.png"
             style={{
               width: "180px",
-              float: "right",
-              paddingRight: "0",
-              marginRight: "50px",
-              marginTop: "20px",
+              justifySelf: "flex-end",
+              marginTop: "10px",
             }}
           />
         </NavLink>

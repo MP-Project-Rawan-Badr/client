@@ -1,12 +1,14 @@
-.centered{
-position: absolute;
-top: 60%;
-left: 10%;
-width: 30%;
-font-size: 20px;
-transform: translate(-20%, -20%);
-color: white;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+.backgroundImgHome {
+  width: 100%;
+  height: 85vh;
 }
 
+#Textcentered {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  width: 30%;
+  font-size: 20px;
+  transform: translate(-20%, -20%);
+  color: white;
+}

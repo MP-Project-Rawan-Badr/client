@@ -22,16 +22,15 @@ const Footer = () => {
           </Link>
         </div>
 
-        <h3
+        <h4
           style={{
             color: "white",
-            marginBottom: "200px",
             fontFamily:
               "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
           }}
         >
           جميع الحقوق محفوظة لومـيـض - 2021
-        </h3>
+        </h4>
       </div>
     </>
   );

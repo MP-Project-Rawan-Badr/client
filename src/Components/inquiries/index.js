@@ -28,7 +28,7 @@ const Inquiries = () => {
         },
       }
     );
-    console.log(result);
+    // console.log(result);
     setInquiries(result.data);
   };
 
@@ -48,24 +48,77 @@ const Inquiries = () => {
     }
   };
 
+  //delete inquiry
+  const deleteInquiry = async (id) => {
+    try {
+      await axios.delete(
+        `${process.env.REACT_APP_BASE_URL}/deleteInquiry/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${state.Login.token}`,
+          },
+        }
+      );
+      deleteInquiry(state.Login.token);
+    } catch (error) {
+      // console.log(error);
+    }
+    window.location.reload(false);
+  };
+
   return (
     <>
       <Navbar />
-      <div style={{ marginTop: "100px" }}>
+      <div style={{ marginTop: "140px" }}>
         <Search className="search" searchpages={searchpages} />
 
-        <br />
-        <div className="inquiries">
+        <div className="grid-containerInq">
           {inquiries.map((item) => (
             <>
               <div key={item._id}>
-                <div
-                  className="inquiry"
+                {state.Login.user.role === "61c05aad3708bf224ada4791" ||
+                item.user._id == state.Login.user._id ? (
+                  <p
+                    style={{
+                      fontSize: "25px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => deleteInquiry(item._id)}
+                  >
+                    x
+                  </p>
+                ) : (
+                  ""
+                )}
+                <img
+                  style={{
+                    borderRadius: "50%",
+                    width: "60px",
+                    float: "right",
+                    padding: "5px",
+                    marginBottom: "20px",
+                  }}
+                  src={item.user.avatar}
+                  alt="avatarImg"
+                />
+                <h5 style={{ padding: "20px" }}>{item.user.userName}</h5>
+                <h3
+                  className="clickTite"
+                  style={{ cursor: "pointer" }}
                   onClick={() => navigate(`/inquiry/${item._id}`)}
                 >
-                  <h3 id="title">{item.title}</h3>
-                  <h3 id="dec">{item.dec}</h3>
-                </div>
+                  {item.title}
+                </h3>
+                <h3
+                  style={{
+                    float: "left",
+                    fontSize: "16px",
+                    color: "rgb(82, 89, 97)",
+                    padding: "10px",
+                  }}
+                >
+                  {item.complete}
+                </h3>
               </div>
             </>
           ))}

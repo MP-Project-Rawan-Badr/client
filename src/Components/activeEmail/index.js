@@ -6,9 +6,11 @@ const ActivateEmail = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // token
   const token = location.pathname.split("/")[2];
-  console.log(token);
+  // console.log( "loc" , location.pathname.split("/")[2]);
   const BASE_URL = process.env.REACT_APP_BASE_URL;
+
   const [err, setErr] = useState("");
   const [Erro, setErro] = useState(true);
 
@@ -21,7 +23,7 @@ const ActivateEmail = () => {
       if (result.data.err) {
         setErr(result.data.err);
       }
-      console.log(result.data);
+      // console.log(result.data);
     } catch (error) {
       console.log(error);
     }
@@ -33,34 +35,36 @@ const ActivateEmail = () => {
 
   return (
     <div>
-      <div className="home" style={{ marginTop: "200px" }}>
-        {!Erro ? (
-          <div className="homeContainer">
-            <h1>Your account has been activated!</h1>
-            <div className="btns">
-              <button
-                onClick={() => {
-                  navigate("/login");
-                }}
-              >
-                Go Login
-              </button>
-            </div>
-          </div>
-        ) : (
-          <div className="formm">
-            <h1>Error</h1>
-            <p>{err}</p>
+      {!Erro ? (
+        <div className="container">
+          <div className="card">
+            <div className="card-image"></div>
+            <br />
+            <h3>تم تنشيط حسابك</h3>
+            <br />
             <button
+              style={{ backgroundColor: "rgb(26,87,142)", color: "white" }}
               onClick={() => {
-                navigate("/");
+                navigate("/login");
               }}
             >
-              Back to home
+              اذهب الى تسجيل الدخول
             </button>
           </div>
-        )}
-      </div>
+        </div>
+      ) : (
+        <div className="container">
+          <h1>!!خطأ</h1>
+          <p>{err}</p>
+          <button
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            رجوع
+          </button>
+        </div>
+      )}
     </div>
   );
 };

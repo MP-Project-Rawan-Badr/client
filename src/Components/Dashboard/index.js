@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import "./style.css";
 import Search from "../search";
 
-const ServiceProvider = () => {
+const Dashboard = () => {
   const [user, setUser] = useState([]);
   const navigate = useNavigate();
 
@@ -16,22 +16,45 @@ const ServiceProvider = () => {
   });
 
   useEffect(() => {
-    getServiceProvider();
+    getAllUsers();
   }, []);
 
-  //get all service providers
-  const getServiceProvider = async () => {
+  //get all users
+  const getAllUsers = async () => {
     const result = await axios.get(
-      `${process.env.REACT_APP_BASE_URL}/getServiceProvider`,
+      `${process.env.REACT_APP_BASE_URL}/allusers`,
       {
         headers: {
           Authorization: `Bearer ${state.Login.token}`,
         },
       }
     );
-    // console.log(result.data);
+    // console.log(result);
     setUser(result.data);
   };
+
+  //delete user
+  const deleteUsers = async (_id) => {
+    // console.log("_id" , _id);
+   const result =
+      await axios.put(
+        `${process.env.REACT_APP_BASE_URL}/delUser/${_id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${state.Login.token}`,
+          },
+        }
+      );
+      // console.log("result" , result);
+      // deleteUsers();
+      getAllUsers(result);
+    // } catch (error) {
+    //   console.log(error);
+    // }
+    // window.location.reload(false);
+  };
+
+
   // search on service provider...
   const searchpages = (e) => {
     const value = e.target.value.toLowerCase();
@@ -44,17 +67,34 @@ const ServiceProvider = () => {
         })
       );
     } else {
-      getServiceProvider();
+      getAllUsers();
     }
   };
   return (
     <>
       <Navbar />
-      <div style={{ marginTop: "0px" }}>
+      <div style={{ marginTop: "140px" }}>
         <Search className="search" searchpages={searchpages} />
         <div className="grid-containerInq">
           {user?.map((item) => (
             <div key={item._id}>
+                          {console.log("item",item)}
+
+               { console.log("user" , item.role.role !== "admin")}
+               {/* {state.Login.user.role === "61c05aad3708bf224ada4791" ? ( */}
+                  <p
+                    style={{
+                      fontSize: "25px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => deleteUsers(item._id)}
+                  >
+                    x
+                  </p>
+                {/* ) : (
+                  ""
+                )} */}
+
               <img
                 style={{
                   borderRadius: "50%",
@@ -72,7 +112,12 @@ const ServiceProvider = () => {
               >
                 {item.userName}
               </h5>
-              <h6 style={{ color: "gray" }}> التصنيف: {item.specialty}</h6>
+              {/* item.role.role */}
+              <h6 style={{ color: "gray" }}>  {item.role.role}</h6>
+              
+              {/* role -> هنا ابغى احط وش نوع اليوزر */}
+              <h6 style={{ color: "gray" }}>  {item.email}</h6>
+
             </div>
           ))}
         </div>
@@ -82,4 +127,4 @@ const ServiceProvider = () => {
   );
 };
 
-export default ServiceProvider;
+export default Dashboard;
