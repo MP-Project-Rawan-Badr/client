@@ -15,10 +15,9 @@ const initialState = {
         localStorage.setItem("user", JSON.stringify(user));
         return { role, token, user };
       case "LOGOUT":
-        localStorage.removeItem("token");
-        localStorage.removeItem("role");
-        localStorage.removeItem("user");
-        return { role: "", token: "", user: null };
+        localStorage.clear();
+        
+        return payload;
       default:
         const tokenStorge = localStorage.getItem("token");
         const roleStorge = localStorage.getItem("role");

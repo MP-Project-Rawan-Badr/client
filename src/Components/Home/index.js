@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Footer from "../Footer";
-import Header from "../Header";
 import Navbar from "../Navbar";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
@@ -23,7 +22,6 @@ const Home = () => {
   });
 
   // get inquiry
-  const [inq, setInq] = useState(0);
   const getAllInquiries = async () => {
     const result = await axios.get(
       `${process.env.REACT_APP_BASE_URL}/getInquiries`,
@@ -35,11 +33,9 @@ const Home = () => {
     );
     // console.log(result);
     setInquiries(result.data.slice(-3));
-    setInq(result.data.length);
   };
 
   // get posts
-  const [post, setPost] = useState(0);
   const getAllPosts = async () => {
     const result = await axios.get(
       `${process.env.REACT_APP_BASE_URL}/getAllPosts`,
@@ -51,25 +47,30 @@ const Home = () => {
     );
     // console.log(result);
     setPosts(result.data.slice(-3));
-    setPost(result.data.length);
   };
 
   return (
     <>
-      <Navbar fixed="top" />
-      <Header />
+      <div className="containerHome">
+        <div className="c1">
+          <div className="app-text">
+            <h1 style={{ color: "rgb(221,233,247)" }}>ما هو وميض؟</h1>
+            <br />
+            <h5>
+              في منصة وميض يمكنك كـمستفيد العثور على مقدمي الخدمة ويمكنك طرح
+              سؤالك أو .استفسارك وستجد إجابة له وكـمقدم خدمة يمكنك عرض خدمتك
+              وتسويق مشروعك ليسهل على المستفيد الوصول لك
+            </h5>
+          </div>
+          <div className="app-picture">
+            <img style={{ width: "580px" }} src="./img/image31.png" />
+          </div>
+        </div>
+      </div>
       <div>
         {/* latest inquiry */}
-        <h4
-          style={{
-            padding: "40px",
-            fontSize: "40px",
-            paddingTop: "20px",
-          }}
-        >
-          أحدث الاستفسارات
-        </h4>
-        <div className="grid-containerInq">
+        <h2 className="lastInq">أحدث الاستفسارات</h2>
+        <div className="grid-containerInqHome">
           {inquiries
             .map((i) => {
               return (
@@ -77,17 +78,13 @@ const Home = () => {
                   <div>
                     <div>
                       <img
-                        style={{
-                          borderRadius: "50%",
-                          width: "60px",
-                          float: "right",
-                          padding: "10px",
-                          marginBottom: "20px",
-                        }}
+                        className="avtarHome"
+                        style={{ width: "80px", borderRadius: "50%" }}
                         src={i.user.avatar}
                         alt="avatarImg"
                       />
-                      <h3>{i.user.userName}</h3>
+                      <h4>{i.user.userName}</h4>
+                      <br />
                       <p
                         style={{ cursor: "pointer" }}
                         className="clickTite"
@@ -95,16 +92,6 @@ const Home = () => {
                       >
                         {i.title}
                       </p>
-                      <h3
-                        style={{
-                          padding: "10px",
-                          float: "left",
-                          fontSize: "16px",
-                          color: "rgb(82, 89, 97)",
-                        }}
-                      >
-                        {i.complete}
-                      </h3>
                     </div>
                   </div>
                 </>
@@ -112,30 +99,35 @@ const Home = () => {
             })
             .reverse()}
         </div>
+        <br />
+        <div className="containerHome-two">
+          <div className="c1">
+            <div className="app-text">
+              <h1 style={{ color: "black" }}>لماذا وميض؟ </h1>
+              <h5>
+                في البداية ، معناها هو ضوء ضئيل يسطع فجأة في بعض البلورات عند
+                تعرضها للإشعاع أو الجسيمات المشعة. تساعد هذه المنصة وتعطي بريقًا
+                لكل مستخدم يريد خدمة ولم يجدها ، وهنا يجد جميع أنواع الخدمات دون
+                أن يستغرق وقتًا طويلاً وبحثًا سهلاً
+              </h5>
+            </div>
+            <div className="app-picture">
+              <img style={{ width: "580px" }} src="./img/image4.jpg" />
+            </div>
+          </div>
+        </div>
 
-        <h4
-          style={{
-            paddingRight: "20px",
-            fontSize: "40px",
-            paddingTop: "20px",
-          }}
-        >
-          أحدث المشاريع
-        </h4>
-        <div className="grid-container">
+        <br />
+
+        <h4 className="lastInq">أحدث المشاريع</h4>
+        <div className="grid-containerHome">
           {posts
             .map((i) => {
               return (
                 <div key={i._id}>
                   <>
                     <img
-                      className="imgP"
-                      style={{
-                        width: "100%",
-                        height: "70%",
-                        borderRadius: "20px",
-                        opacity: "0.8",
-                      }}
+                      style={{ width: "100%", height: "250px" }}
                       src={i.image}
                     />
                     <h3
@@ -145,6 +137,13 @@ const Home = () => {
                     >
                       {i.title}
                     </h3>
+                    <div className="grid-post">
+                      <button style={{ borderRight: " 1px solid black" }}>
+                        {i.price}
+                      </button>
+
+                      <button>{i.workingTime}</button>
+                    </div>
                   </>
                 </div>
               );
@@ -152,7 +151,6 @@ const Home = () => {
             .reverse()}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

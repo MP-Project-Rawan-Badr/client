@@ -1,22 +1,23 @@
-.grid-containerInq {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(221, 233, 247);
-  padding: 30px;
-  padding-bottom: 0;
-  width: 50%;
-  margin: 90px;
-  margin-left: 10%;
-  height: 10%;
+.grid-containerService {
+  margin-bottom: 20px;
+  padding: 100px;
+  /*  */
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 20px;
+  padding-bottom: 20px;
+  padding-left: 60px;
 }
 
-.grid-containerInq > div {
+.grid-containerService > div {
+  background-color: rgb(255, 255, 255);
   text-align: right;
-  padding-right: 40px;
-  font-size: 30px;
-  width: 100%;
-  border-bottom: 1px solid black;
-  align-items: center;
+  padding: 20px;
+  padding-right: 50px;
+  font-size: 25px;
+  width: 25rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 .clickTite:hover {
   color: rgb(91, 129, 166);

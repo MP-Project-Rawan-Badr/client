@@ -29,8 +29,10 @@ const Login = () => {
       const data = {
         user: result.data.result,
         token: result.data.token,
+        role: result.data.result.role,
       };
-      // console.log(result.data);
+
+      console.log("user" , result.data);
       dispatch(Log(data));
       // console.log(result.data.result.role);
       Swal.fire("تم تسجيل الدخول بنجاح", "تم تسجيل دخولك بنجاح", "success");

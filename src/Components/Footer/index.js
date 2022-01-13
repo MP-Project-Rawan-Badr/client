@@ -1,24 +1,29 @@
 import React from "react";
 import "./style.css";
-import { BsTwitter, BsInstagram, BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import {
+  AiFillFacebook,
+  AiOutlineTwitter,
+  AiFillInstagram,
+  AiFillGithub,
+} from "react-icons/ai";
 
 const Footer = () => {
   return (
     <>
       <div className="fulldiv">
-        <div className="icon">
-          <Link to="" id="path">
-            {" "}
-            <BsInstagram />{" "}
+        <div className="navStart">
+          <Link to="" id="socaialIcons">
+            <AiOutlineTwitter />
           </Link>
-          <Link to="" id="path">
-            {" "}
-            <BsTwitter />{" "}
+          <Link to="" id="socaialIcons">
+            <AiFillInstagram />
           </Link>
-          <Link to="" id="path">
-            {" "}
-            <BsGithub />{" "}
+          <Link to="" id="socaialIcons">
+            <AiFillFacebook />
+          </Link>
+          <Link to="" id="socaialIcons">
+            <AiFillGithub />
           </Link>
         </div>
 

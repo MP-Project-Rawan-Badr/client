@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
@@ -8,10 +8,12 @@ import { LogT } from "./../../reducer/signIn";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const [user, setUser] = useState([]);
 
   const state = useSelector((state) => {
     return state;
   });
+  console.log(state.Login.user);
   // console.log(state);
   // logout
   const dispatch = useDispatch();
@@ -25,22 +27,24 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navWrapper">
+{state.Login.token? (
+<>
+<div className="navWrapper">
         <div>
           <div className="dropdown">
             <img
               className="dropbtn"
-              style={{ borderRadius: "50%", width: "50px" }}
-              src={state.Login.user.avatar}
+              style={{ borderRadius: "50%", width: "70px" }}
+              src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-trendy-flat-style-isolated-white-background-187477840.jpg"
               alt="img"
             />
             <div className="dropdown-content">
               <Link
-                to={`/profile/${state.Login.user._id}`}
+                to={`/profile/${state.Login.user?._id}`}
                 id="contentProf"
                 style={{ marginLeft: "5px", fontSize: "16px" }}
               >
-                {state.Login.user.userName}
+                الصفحة الشخصية
               </Link>
               <Link
                 onClick={signout}
@@ -64,6 +68,13 @@ const Navbar = () => {
         <NavLink to="/ServiceProvider" className="linkNav">
           مقدمي الخدمة
         </NavLink>
+        {state.Login.user.role === "61c05aad3708bf224ada4791" ? (
+        <NavLink to="/dashboard" className="linkNav">
+           المستخدمين
+        </NavLink>
+        ) : (
+          ""
+        )}
         <NavLink to="/home">
           <img
             className="igLogo"
@@ -76,6 +87,11 @@ const Navbar = () => {
           />
         </NavLink>
       </div>
+</>) : 
+(
+"")
+}
+      
     </>
   );
 };

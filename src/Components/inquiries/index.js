@@ -68,11 +68,10 @@ const Inquiries = () => {
 
   return (
     <>
-      <Navbar />
-      <div style={{ marginTop: "140px" }}>
+      <div style={{ marginTop: "100px" }}>
         <Search className="search" searchpages={searchpages} />
 
-        <div className="grid-containerInq">
+        <div className="grid-containerInqi">
           {inquiries.map((item) => (
             <>
               <div key={item._id}>
@@ -80,7 +79,10 @@ const Inquiries = () => {
                 item.user._id == state.Login.user._id ? (
                   <p
                     style={{
-                      fontSize: "25px",
+                      float: "right",
+                      fontSize: "30px",
+                      marginTop: "-10px",
+                      paddingRight: "15px",
                       cursor: "pointer",
                     }}
                     onClick={() => deleteInquiry(item._id)}
@@ -91,40 +93,32 @@ const Inquiries = () => {
                   ""
                 )}
                 <img
-                  style={{
-                    borderRadius: "50%",
-                    width: "60px",
-                    float: "right",
-                    padding: "5px",
-                    marginBottom: "20px",
-                  }}
+                  //  className="avtarHome"
+                  style={{ width: "80px", borderRadius: "50%" }}
                   src={item.user.avatar}
                   alt="avatarImg"
                 />
-                <h5 style={{ padding: "20px" }}>{item.user.userName}</h5>
-                <h3
+                <h5>{item.user.userName}</h5>
+                <br />
+                <h4
                   className="clickTite"
                   style={{ cursor: "pointer" }}
                   onClick={() => navigate(`/inquiry/${item._id}`)}
                 >
                   {item.title}
-                </h3>
-                <h3
-                  style={{
-                    float: "left",
-                    fontSize: "16px",
-                    color: "rgb(82, 89, 97)",
-                    padding: "10px",
-                  }}
-                >
-                  {item.complete}
-                </h3>
+                </h4>
+                <br />
+                <div className="grid-inq">
+                  <button style={{ borderRight: " 1px solid black" }}>
+                    {item.complete}
+                  </button>
+                  <button>المنطقة : {item.user.city}</button>
+                </div>
               </div>
             </>
           ))}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

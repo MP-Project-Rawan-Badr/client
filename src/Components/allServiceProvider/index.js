@@ -49,16 +49,15 @@ const ServiceProvider = () => {
   };
   return (
     <>
-      <Navbar />
-      <div style={{ marginTop: "0px" }}>
+      <div style={{ marginTop: "100px" }}>
         <Search className="search" searchpages={searchpages} />
-        <div className="grid-containerInq">
+        <div className="grid-containerService">
           {user?.map((item) => (
             <div key={item._id}>
               <img
                 style={{
                   borderRadius: "50%",
-                  width: "60px",
+                  width: "70px",
                   float: "right",
                   padding: "10px",
                   marginBottom: "20px",
@@ -73,11 +72,11 @@ const ServiceProvider = () => {
                 {item.userName}
               </h5>
               <h6 style={{ color: "gray" }}> التصنيف: {item.specialty}</h6>
+              <h6 style={{ color: "gray" }}>المنطقة: {item.city}</h6>
             </div>
           ))}
         </div>
       </div>
-      <Footer />
     </>
   );
 };
