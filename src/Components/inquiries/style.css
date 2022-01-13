@@ -1,34 +1,39 @@
-.grid-containerInq {
-    display: flex;
-    flex-direction: column;
-    /* grid-template-rows: 20% ;
-    grid-gap: 100px; */
-    padding: 30px;
-    padding-bottom: 0;
-    background-color: rgb(250, 251, 252);
-
-    /* margin-left: 200px; */
-    /* border: 1px solid white ; */
-    /* border-radius: 20px; */
-    width: 80%;
-    margin: 100px;
-    margin-left: 10%;
-    height: 20%;
+.grid-containerInqi {
+  margin-bottom: 20px;
+  padding: 100px;
+  /*  */
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 20px;
+  padding-bottom: 50px;
+  /* padding-left: 100px; */
     
   }
   
-  .grid-containerInq > div {
-    text-align: right;
-    padding-right: 40px ;
-    font-size: 30px;
-    width: 100%;
-    background-color: rgb(221, 233, 247);
-    border-radius: 10px;
-    border-bottom: 1px solid black;
-    align-items: center;
+  .grid-containerInqi > div {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 20px;
+    /* padding: 20px; */
+    font-size: 25px;
+    width: 25rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   }
   .clickTite:hover{
     color: rgb(91,129,166);
     /* color: rgb(82, 89, 97); */
     }
+
+.grid-inq{
+  display: grid;
+  grid-template-columns: 50% 30%;
+  grid-gap: 50px;
+  padding: 10px;
+  border-top: 1px solid black;
+}
+.grid-inq button{
+  background-color: white;
+  border: none;
+  font-size: 16px;
+}

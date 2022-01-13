@@ -5,6 +5,10 @@ import "./style.css";
 import Footer from "../Footer";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
 import {
   AiOutlineInstagram,
   AiOutlineTwitter,
@@ -14,11 +18,11 @@ import {
 
 const Post = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
+
   const [post, setPost] = useState([]);
-  // const [Editpost, setEditpost] = useState([]);
   const [edit, setEdit] = useState(false);
-  // const [img, setImg] = useState([]);
-  const [updatedimg, setupdatedimg] = useState([]);
+  const [user, setUser] = useState([]);
 
   const state = useSelector((state) => {
     return state;
@@ -27,6 +31,7 @@ const Post = () => {
   useEffect(() => {
     getOnePost();
     getOneUser();
+    getServiceProvider();
   }, []);
 
   const getOnePost = async () => {
@@ -97,34 +102,34 @@ const Post = () => {
   //   // console.log(updatedimg);
   // }, [updatedimg]);
 
+  //get all service providers
+  const getServiceProvider = async () => {
+    const result = await axios.get(
+      `${process.env.REACT_APP_BASE_URL}/getServiceProvider`,
+      {
+        headers: {
+          Authorization: `Bearer ${state.Login.token}`,
+        },
+      }
+    );
+    // console.log(result.data);
+    setUser(result.data);
+  };
+
   return (
     <>
-      <Navbar />
-      <div>
-        <div className="row">
+      <div style={{ marginTop: "30px" }}>
+        <div className="postCont">
           {post.map((item) => (
             <>
-              <div className="col-3 col-s-3 menu">
-                <ul>
-                  <li>السعر {item.price} ريال</li>
-                  <li> مدة العمل {item.workingTime} </li>
-                  {item.image.map((img) => (
-                    <li
-                      style={{
-                        width: "94%",
-                        padding: "30px",
-                        backgroundColor: "white",
-                      }}
-                    >
-                      <img style={{ width: "100%" }} src={img}></img>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="col-6 ">
-                <h1 style={{ fontSize: "30px", padding: "10px" }}>
-                  {item.title}
-                </h1>
+              <Carousel >
+                {item.image.map((img) => (
+                  <div style={{height: "480px" }}>
+                    <img src={img}/>
+                  </div>
+                ))}
+              </Carousel>
+              <div>
                 {item.user._id == state.Login.user._id ? (
                   <>
                     <p
@@ -133,6 +138,7 @@ const Post = () => {
                         cursor: "pointer",
                         float: "right",
                         fontSize: "13px",
+                        
                       }}
                     >
                       ⚙️
@@ -141,16 +147,32 @@ const Post = () => {
                 ) : (
                   <></>
                 )}
-                <p>{item.dec}</p>
-                <img
-                  className="imgpost"
-                  src={item.image[0]}
-                  width="100%"
-                  height="50%"
-                />
+                <h1 style={{ fontSize: "40px", marginTop: "80px" }}>
+                  {item.title}
+                </h1>
+                <h4>{item.dec}</h4>
+                <h5>السعر: {item.price} ريال</h5>
+                <h5> مدة العمل {item.workingTime} </h5>
+                <h5
+                  className="userName"
+                  onClick={() => navigate(`/profile/${item._id}`)}
+                >
+                  صاحب المشروع: {item.user.userName}
+                </h5>
               </div>
-              <div className="col-3 col-s-12">
-                <div className="aside">
+              {/* {item.image.map((img) => (
+                    <h5
+                      style={{
+                        width: "94%",
+                        padding: "30px",
+                        backgroundColor: "white",
+                      }}
+                    >
+                      <img style={{ width: "100%" }} src={img}></img>
+                    </h5>
+                  ))} */}
+
+              {/* <div className="">
                   <img
                     style={{ borderRadius: "50%", width: "100px" }}
                     src={item.user.avatar}
@@ -164,8 +186,7 @@ const Post = () => {
                     <AiFillFacebook />
                     <AiOutlineMessage />
                   </h5>
-                </div>
-              </div>
+                </div> */}
             </>
           ))}
         </div>
@@ -261,7 +282,7 @@ const Post = () => {
         ................................................
         ................................................... */}
         {edit ? (
-          <div className="edit">
+          <div style={{marginTop: "-20px"}} className="edit">
             {post.map((item) => (
               // <div className="card">
               <form onSubmit={updatPost}>
@@ -367,7 +388,6 @@ const Post = () => {
         )}
       </div>
 
-      <Footer />
     </>
   );
 };

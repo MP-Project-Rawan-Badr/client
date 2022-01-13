@@ -88,6 +88,7 @@ const Inquiry = () => {
       `${process.env.REACT_APP_BASE_URL}/updateInquiry/${id}`,
       {
         title: e.target.title.value,
+        // city: e.target.city.value,
         complete: e.target.completed.value,
       },
       {
@@ -97,6 +98,8 @@ const Inquiry = () => {
       }
     );
     // console.log(result.data);
+    window.location.reload(false);
+
   };
 
   //
@@ -130,101 +133,145 @@ const Inquiry = () => {
 
   return (
     <>
-      <Navbar />
-      <div>
-        {inquiry.map((item) => (
-          <div className="row">
-            <div className="col-3 menu">
-              {/* comments */}
-              <ul>
-                {comment?.map((ele) => {
-                  return (
-                    <div>
-                      <li>
-                        {ele.comment}[ {ele.user.userName} ]
-                        {state.Login.user.role === "61c05aad3708bf224ada4791" ||
-                        ele.user._id === state.Login.user._id ? (
-                          <p
-                            onClick={() => deleteComment(ele._id)}
-                            style={{ cursor: "pointer", float: "left" }}
-                          >
-                            ✖️
-                          </p>
-                        ) : (
-                          ""
-                        )}
-                      </li>
-                    </div>
-                  );
-                })}
-              </ul>
-            </div>
-            <div className="col-6">
-              <h4 style={{ fontSize: "30px", padding: "10px" }}>
-                {item.title}
-                {item.user._id == state.Login.user._id ? (
-                  <>
-                    <p
-                      onClick={() => setEdit(true)}
-                      style={{
-                        cursor: "pointer",
-                        float: "right",
-                        fontSize: "13px",
-                      }}
-                    >
-                      ⚙️
-                    </p>
-                  </>
-                ) : (
-                  <></>
-                )}
-              </h4>
-              <br />
-              <button onClick={addComment}>اضافة</button>
-              <input
-                required
-                style={{ textAlign: "right", width: "35%" }}
-                placeholder="اضافة تعليق"
-                type="text"
-                onChange={(e) => setNewComment(e.target.value)}
-              />
-            </div>
-            <div className="col-3 right">
-              <div className="aside">
-                <img
-                  style={{ borderRadius: "50%", width: "100px" }}
-                  src={item.user.avatar}
-                  alt="avatarImg"
-                ></img>
+      <div style={{ marginTop: "100px" }}>
+        <div className="flex-contanerInq">
+          {/* <div className="centerBottom"> */}
 
-                <h3>{item.user.userName}</h3>
-              </div>
+           {/* left  */}
+           
+           {/* comments */}
+           <div className="Left-side" >
+            <ul>
+              {comment?.map((ele) => {
+                return (
+                  <div className="comment">
+                    <h5>
+                      {ele.comment} [ {ele.user.userName} ]
+                      {state.Login.user.role === "61c05aad3708bf224ada4791" ||
+                      ele.user._id === state.Login.user._id ? (
+                        <p
+                          onClick={() => deleteComment(ele._id)}
+                          style={{
+                            cursor: "pointer",
+                            float: "left",
+                            fontSize: "13px",
+                            paddingLeft: "10px",
+                          }}
+                        >
+                          ✖️
+                        </p>
+                      ) : (
+                        ""
+                      )}
+                    </h5>
+                  </div>
+                );
+              })}
+            </ul>
             </div>
-          </div>
-        ))}
+          {/* ........................................ */}
+                    {/* Right */}
+
+          <div className="Right-side" style={{ backgroundColor: "white" , textAlign: "right" , paddingTop: "20px"  }}>
+            {inquiry.map((item) => (
+              <>
+            <h6 style={{float: "right" , padding: "20px"}}>
+                  {item.complete}
+                </h6>
+                <h4
+                  style={{
+                    fontSize: "30px",
+                     paddingRight: "80px" , paddingTop: "60px"
+                  }}
+                >
+                  {item.title}
+                  {item.user._id == state.Login.user._id ? (
+                    <>
+                      <p
+                        onClick={() => setEdit(true)}
+                        style={{
+                          cursor: "pointer",
+                          float: "right",
+                          fontSize: "13px",
+                        }}
+                      >
+                        ⚙️
+                      </p>
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                </h4>
+
+                <h6 style={{ color: "gray" , paddingRight: "80px" }}>
+                  {item.user.userName}
+                </h6>
+                {/* <h6 style={{ color: "gray" , paddingRight: "80px" }}>
+                  {item.city}
+                </h6> */}
+            
+              </>
+            ))}
+        </div>
+        <div></div>
+        <div>
+          <button
+            style={{
+              paddingLeft: "20px",
+              paddingRight: "20px",
+              border: "1px solid gray",
+            }}
+            onClick={addComment}
+          >
+            اضافة تعليق
+          </button>
+
+          <input
+            style={{  width: "80%"  }}
+            className="inputInqComent"
+            required
+            placeholder="اضافة تعليق"
+            type="text"
+            onChange={(e) => setNewComment(e.target.value)}
+          /></div>
+        
+{/* ........................................ */}
+
+           
+         
+            </div>
         {edit ? (
           <div className="edit">
             {inquiry.map((item) => (
               <form onSubmit={updateInquiry}>
-                <div key={item._id}>
-                  <div className="desc">
-                    <input type="text" name="title" defaultValue={item.title} />
+                <div key={item._id} className="card">
+                  <div className="input">
+                    <input className="input-field" type="text" name="title" defaultValue={item.title} />
                   </div>
-                </div>
+                  {/* <div className="input">
+                    <input className="input-field" type="text" name="city" defaultValue={item.city} />
+                  </div> */}
+                  
                 <select name="completed">
                   <option value="مكتمل">مكتمل</option>
                   <option value="غير مكتمل">غير مكتمل</option>
                 </select>
-                <button type="submit">حفظ</button>
-                <button onClick={() => setEdit(false)}>الغاء</button>
+                <div className="action">
+                <button  className="action-button"  type="submit">حفظ</button>
+                <button
+                 style={{ backgroundColor: "grey", margin: "10px" }}
+                 className="action-button"
+                 onClick={() => setEdit(false)}>الغاء</button>
+                </div>
+                </div>
               </form>
+              
             ))}
           </div>
         ) : (
           <></>
         )}
       </div>
-      <Footer />
     </>
   );
 };

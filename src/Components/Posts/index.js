@@ -62,23 +62,34 @@ const Posts = () => {
 
   return (
     <>
-      <Navbar />
-      <div style={{ marginTop: "140px" }}>
+      <div style={{ marginTop: "100px" }}>
         <Search className="search" searchpages={searchpages} />
 
-        <div class="grid-container">
+        <div class="grid-containerPosts">
           {posts.map((item) => (
             <div key={item._id}>
+              
               <img
-                className="imgP"
-                style={{
-                  width: "100%",
-                  height: "70%",
-                  borderRadius: "20px",
-                  opacity: "0.8",
-                }}
+                style={{ width: "100%", height: "250px" }}
                 src={item.image}
               ></img>
+              {state.Login.user.role == "61c05aad3708bf224ada4791" ||
+                item.user == state.Login.user._id ? (
+                  <h1
+                    style={{
+                      float: "right",
+                      fontSize: "30px",
+                      marginTop: "-10px",
+                      paddingRight: "15px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => deletePost(item._id)}
+                  >
+                    x
+                  </h1>
+                 ) : (
+                  ""
+                )} 
               <h3
                 className="clickTite"
                 onClick={() => navigate(`/Post/${item._id}`)}
@@ -86,11 +97,17 @@ const Posts = () => {
               >
                 {item.title}
               </h3>
+              <div className="grid-post">
+                <button style={{ borderRight: " 1px solid black" }}>
+                  {item.price} ريال
+                </button>
+
+                <button>{item.workingTime}</button>
+              </div>
             </div>
           ))}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

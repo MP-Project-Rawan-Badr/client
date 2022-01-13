@@ -38,7 +38,7 @@ const Dashboard = () => {
     // console.log("_id" , _id);
    const result =
       await axios.put(
-        `${process.env.REACT_APP_BASE_URL}/delUser/${_id}`,
+        `${process.env.REACT_APP_BASE_URL}/delUser/${_id}`,{},
         {
           headers: {
             Authorization: `Bearer ${state.Login.token}`,
@@ -72,10 +72,9 @@ const Dashboard = () => {
   };
   return (
     <>
-      <Navbar />
-      <div style={{ marginTop: "140px" }}>
+      <div style={{ marginTop: "80px" }}>
         <Search className="search" searchpages={searchpages} />
-        <div className="grid-containerInq">
+        <div className="grid-containerService">
           {user?.map((item) => (
             <div key={item._id}>
                           {console.log("item",item)}
@@ -122,7 +121,6 @@ const Dashboard = () => {
           ))}
         </div>
       </div>
-      <Footer />
     </>
   );
 };
