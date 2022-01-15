@@ -80,10 +80,10 @@ const Home = () => {
                       <img
                         className="avtarHome"
                         style={{ width: "80px", borderRadius: "50%" }}
-                        src={i.user.avatar}
+                        src={i.user?.avatar}
                         alt="avatarImg"
                       />
-                      <h4>{i.user.userName}</h4>
+                      <h4>{i.user?.userName}</h4>
                       <br />
                       <p
                         style={{ cursor: "pointer" }}
