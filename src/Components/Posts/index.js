@@ -65,7 +65,7 @@ const Posts = () => {
       <div style={{ marginTop: "100px" }}>
         <Search className="search" searchpages={searchpages} />
 
-        <div class="grid-containerPosts">
+        <div className="grid-containerPosts">
           {posts.map((item) => (
             <div key={item._id}>
               

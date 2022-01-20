@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../Navbar";
 import axios from "axios";
 import "./style.css";
-import Footer from "../Footer";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 
@@ -144,7 +142,7 @@ const Inquiry = () => {
             <ul>
               {comment?.map((ele) => {
                 return (
-                  <div className="comment">
+                  <div key={ele._id} className="comment">
                     <h5>
                       {ele.comment} [ {ele.user.userName} ]
                       {state.Login.user.role === "61c05aad3708bf224ada4791" ||
@@ -174,7 +172,7 @@ const Inquiry = () => {
 
           <div className="Right-side" style={{ backgroundColor: "white" , textAlign: "right" , paddingTop: "20px"  }}>
             {inquiry.map((item) => (
-              <>
+              <div key={item._id}>
             <h6 style={{float: "right" , padding: "20px"}}>
                   {item.complete}
                 </h6>
@@ -210,7 +208,7 @@ const Inquiry = () => {
                   {item.city}
                 </h6> */}
             
-              </>
+              </div>
             ))}
         </div>
         <div></div>

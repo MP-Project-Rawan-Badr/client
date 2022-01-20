@@ -2,7 +2,7 @@
   margin-bottom: 0px;
   padding: 100px;
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns:  70% 30%;
   grid-gap: 20px;
 }
 
@@ -10,7 +10,6 @@
   text-align: right;
   font-size: 25px;
   width: 90%;
-
 }
 
 .postCont > img{
@@ -21,6 +20,10 @@
 .userName:hover{
  color:rgb(119, 154, 185);
  cursor: pointer;
+}
+.Left-sideProf{
+  text-align: right;
+  padding: 50px;
 }
 
 

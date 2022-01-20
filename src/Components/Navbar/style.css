@@ -12,7 +12,7 @@
   z-index: 2;
 }
 .navWrapper :hover{
-  /* background-color: rgb(243,243,243); */
+  background-color: white;
   color: rgb(79,126,167);
 }
 
