@@ -30,7 +30,8 @@ https://slides
 https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
 
 ### :heavy_check_mark: `Deploy:`
-https://mp-ffront.herokuapp.com/
+https://finalclient-wmeedh.herokuapp.com/
+
 <br/>
 
 
