@@ -293,7 +293,7 @@ const Profile = () => {
           <div></div>
 
           {/* left  */}
-          <div className="Left-side" style={{ paddingRight: "40px" }}>
+          <div className="Left-sideProf" style={{ paddingRight: "40px" }}>
             {user[0]?._id == state.Login.user._id ? (
               <>
                 <h6 style={{ float: "left" , cursor: "pointer" }} onClick={() => setEdit(true)}>
@@ -340,7 +340,7 @@ const Profile = () => {
             )}
           </div>
           {/* Right */}
-          <div className="Right-side">
+          <div className="Right-sideProf">
             <img
               className="imgAvProf"
               src={user[0]?.avatar}
@@ -550,9 +550,11 @@ const Profile = () => {
                         onChange={(e) => setTitle(e.target.value)}
                       />
                       <br />
-                      <button type="submit">اضافه</button>
-                      <br />
-                      <button onClick={() => setAddInquiry(false)}>
+                      <button  
+                    className="actionButton" type="submit">اضافه</button>
+                   
+                      <button  style={{ float: "right",  backgroundColor: "gray" }}
+                    className="actionButton" onClick={() => setAddInquiry(false)}>
                         الغاء
                       </button>
                     </div>

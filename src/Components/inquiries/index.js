@@ -73,10 +73,9 @@ const Inquiries = () => {
 
         <div className="grid-containerInqi">
           {inquiries.map((item) => (
-            <>
               <div key={item._id}>
                 {state.Login.user.role === "61c05aad3708bf224ada4791" ||
-                item.user._id == state.Login.user._id ? (
+                item.user?._id == state.Login.user._id ? (
                   <p
                     style={{
                       float: "right",
@@ -95,10 +94,10 @@ const Inquiries = () => {
                 <img
                   //  className="avtarHome"
                   style={{ width: "80px", borderRadius: "50%" }}
-                  src={item.user.avatar}
+                  src={item.user?.avatar}
                   alt="avatarImg"
                 />
-                <h5>{item.user.userName}</h5>
+                <h5>{item.user?.userName}</h5>
                 <br />
                 <h4
                   className="clickTite"
@@ -112,10 +111,9 @@ const Inquiries = () => {
                   <button style={{ borderRight: " 1px solid black" }}>
                     {item.complete}
                   </button>
-                  <button>المنطقة : {item.user.city}</button>
+                  <button>المنطقة : {item.user?.city}</button>
                 </div>
               </div>
-            </>
           ))}
         </div>
       </div>

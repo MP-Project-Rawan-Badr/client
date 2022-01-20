@@ -11,6 +11,11 @@ footer {
   width: 100%;
   height: 8rem;
 }
+
+.fulldiv :hover{
+  background-color: rgb(119,154,185);
+}
+
 .icons {
   font-size: 1.5rem;
   padding: 15px;

@@ -74,8 +74,8 @@ const Home = () => {
           {inquiries
             .map((i) => {
               return (
-                <>
-                  <div>
+             
+                  <div key={i._id}>
                     <div>
                       <img
                         className="avtarHome"
@@ -94,7 +94,7 @@ const Home = () => {
                       </p>
                     </div>
                   </div>
-                </>
+              
               );
             })
             .reverse()}
@@ -125,7 +125,7 @@ const Home = () => {
             .map((i) => {
               return (
                 <div key={i._id}>
-                  <>
+              
                     <img
                       style={{ width: "100%", height: "250px" }}
                       src={i.image}
@@ -144,7 +144,7 @@ const Home = () => {
 
                       <button>{i.workingTime}</button>
                     </div>
-                  </>
+           
                 </div>
               );
             })

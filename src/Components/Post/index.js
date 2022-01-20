@@ -122,13 +122,14 @@ const Post = () => {
         <div className="postCont">
           {post.map((item) => (
             <>
-              <Carousel >
+              <Carousel>
                 {item.image.map((img) => (
-                  <div style={{height: "480px" }}>
-                    <img src={img}/>
+                  <div key={item._id} style={{ height: "480px" }}>
+                    <img src={img} />
                   </div>
                 ))}
               </Carousel>
+
               <div>
                 {item.user._id == state.Login.user._id ? (
                   <>
@@ -138,7 +139,6 @@ const Post = () => {
                         cursor: "pointer",
                         float: "right",
                         fontSize: "13px",
-                        
                       }}
                     >
                       ⚙️
@@ -155,11 +155,12 @@ const Post = () => {
                 <h5> مدة العمل {item.workingTime} </h5>
                 <h5
                   className="userName"
-                  onClick={() => navigate(`/profile/${item._id}`)}
+                  onClick={() => navigate(`/profile/${item.user._id}`)}
                 >
                   صاحب المشروع: {item.user.userName}
                 </h5>
               </div>
+
               {/* {item.image.map((img) => (
                     <h5
                       style={{
@@ -282,7 +283,7 @@ const Post = () => {
         ................................................
         ................................................... */}
         {edit ? (
-          <div style={{marginTop: "-20px"}} className="edit">
+          <div style={{ marginTop: "-20px" }} className="edit">
             {post.map((item) => (
               // <div className="card">
               <form onSubmit={updatPost}>
@@ -387,7 +388,6 @@ const Post = () => {
           <></>
         )}
       </div>
-
     </>
   );
 };
