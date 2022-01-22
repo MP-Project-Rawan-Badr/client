@@ -26,11 +26,9 @@ https://trello.com/b/p0lIavji/mprawanbadr
 ### :heavy_check_mark: `Slides:`
 https://prezi.com/p/edit/gnnj0msb_nfm/
 ### :heavy_check_mark: `Server Repositories:`
-https://github.com/MP-Project-Rawan-Badr/server/blob/main/README.md
-
+https://github.com/MP-Project-Rawan-Badr/server
 ### :heavy_check_mark: `Deploy:`
-https://finalclient-wmeedh.herokuapp.com/
-
+https://finalclient-wmeedh.herokuapp.com
 <br/>
 
 
